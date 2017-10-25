@@ -248,7 +248,7 @@ void float_to_str(char *buf, float f, uint32_t dig_before, uint32_t dig_after)
   *
   *@param   
   */
-void println_float(USART_TypeDef* usart, float f,uint32_t dig_before, uint32_t dig_after)
+void print_float(USART_TypeDef* usart, float f,uint32_t dig_before, uint32_t dig_after)
 {
   char buf[21];
   char *p = buf;
@@ -256,12 +256,8 @@ void println_float(USART_TypeDef* usart, float f,uint32_t dig_before, uint32_t d
   float_to_str(p, f, dig_before, dig_after);
   while (*p)
     ++p;
-  *p++ = '\r';
-  *p++ = '\n';
   *p = '\0';
   serial_puts(usart, buf);
 }
 
-
-#endif /* __GIMBAL_USART_H */
 /**********************************END OF FILE**********************************/

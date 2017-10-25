@@ -17,13 +17,14 @@
 
 /* Define macro ---------------------------------------------------------------*/
 #define CARRIER_TIM_PERIOD 8399
-
+#define CLOCK 84000000
+#define SINE_TIM_PERIOD 500
 /**
   * @brief  TIMx_GPIO_pins_define
   * 
   */
 #define TIM3_GPIO_PIN ((uint16_t)(GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9))
-#define TIM4_GPIO_PIN ((uint16_t)(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin15))
+#define TIM4_GPIO_PIN ((uint16_t)(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15))
 #define TIM5_GPIO_PIN ((uint16_t)(GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4))
 
 #define TIM3_GPIO_PIN_SOURCE ((uint16_t)GPIO_PinSource7 | GPIO_PinSource8 | GPIO_PinSource9)
@@ -35,28 +36,32 @@
   *
   */
 #define RCC_GPIO  ((uint32_t)RCC_AHB1Periph_GPIOA | RCC_AHB1Periph_GPIOB | RCC_AHB1Periph_GPIOD)
-#define RCC_TIM   ((uint32_t)RCC_APB1Periph_TIM2 | RCC_APB1Periph_TIM3 | RCC_APB1Periph_TIM4 | RCC_APB1Periph_TIM5 | RCC_APB1Periph_TIM6 | RCC_APB1Periph_TIM7 | RCC_APB1Periph_TIM8)
-/* Define struct --------------------------------------------------------------*/
-/**
-  * @brief  Define TIMx_GPIOInit struct 
-  */
-typedef struct{
-  GPIO_TypeDef* GPIOx;
-  uint8_t GPIO_AF
-  uint16_t GPIO_Pins;
-  uint16_t GPIO_Pinsources;
-} TIM_GPIOInitTypeDef
+#define RCC_APB1_TIM   ((uint32_t)RCC_APB1Periph_TIM2 | RCC_APB1Periph_TIM3 | RCC_APB1Periph_TIM4 | RCC_APB1Periph_TIM5 | RCC_APB1Periph_TIM7 )
+#define RCC_APB2_TIM ((uint32_t)RCC_APB2Periph_TIM1 | RCC_APB2Periph_TIM8)
 
+/* Variable -------------------------------------------------------------------*/
+int __errno;
+
+uint32_t TIM2_Count;
 
 /* Functions ------------------------------------------------------------------*/
+
+void delay(__IO uint32_t nCount);
+
+void TIM2_IRQHandler(void);
+void TIM1_UP_TIM10_IRQHandler(void);
+void TIM7_IRQHandler(void);
+void TIM8_UP_TIM13_IRQHandler(void);
+
 void tim_init();
-void user_struct_init(TIM_GPIOInitTypeDef* iTIM_GPIOInit);
-void setup_carrier(TIM_TypeDef* TIMx, TIM_GPIOInitTypeDef TIM_GPIOInit);
-void setup_sine(TIM_TypeDef* TIMx, uint8_t TIMx_IRQn);
+void setup_carrier(TIM_TypeDef* TIMx);
+void setup_sine(TIM_TypeDef* TIMx);
 void setup_timer();
-void setup_tim_nvic(uint8_t TIMx_IRQn);
-void setup_tim_gpio(TIM_GPIOInitTypeDef* TIM_GPIOInit);
+void setup_tim_nvic();
+void setup_tim_gpio();
 void setup_tim_rcc();
+
+uint32_t tim2_get_time();
 
 #endif /* __GIMBAL_TIM_H */
 /**********************************END OF FILE**********************************/

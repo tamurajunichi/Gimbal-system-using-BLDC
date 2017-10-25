@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file      gimbal_mpu6050.h  
+  * @file      gimbal_mpu6050.c  
   * @brief     STM32F4 mpu6050 setting file.
   * @author    Junichi
   * @date      23-October-2017
@@ -8,24 +8,37 @@
   ******************************************************************************
  */ 
 
-/* Define to prevent recursive inclusion --------------------------------------*/
-#ifndef __GIMBAL_MPU6050_H
-#define __GIMBAL_MPU6050_H
-
 /* Includes -------------------------------------------------------------------*/
-#include "gimbal_stm32.h"
-
-/* Define macro ---------------------------------------------------------------*/
-#define I2C1_CLK ()
-
-/* Define struct --------------------------------------------------------------*/
+#include "gimbal_mpu6050.h"
 
 /* Functions ------------------------------------------------------------------*/
-/* Event interrupt handler for I2C1. */
+
+/**
+  * @brief     Initialization and Configuration
+  *
+@verbatim   
+ ===============================================================================
+                             ##### IRQHandlers #####
+ ===============================================================================  
+@endverbatim
+  *
+  */
 
 
-void
-I2C1_EV_IRQHandler(void)
+
+void delay(__IO uint32_t nCount)
+{
+    while(nCount--)
+        __asm("nop"); // do nothing
+}
+
+/**
+  * @fn     I2C1_EV_IRQHandler
+  * @brief  
+  * 
+  * @param None 
+  */
+void I2C1_EV_IRQHandler(void)
 {
   void (*handler)(void) = i2c_async_event_handler;
   if (handler)
@@ -37,18 +50,25 @@ I2C1_EV_IRQHandler(void)
   delay(1000000);
 }
 
-
-void
-I2C1_ER_IRQHandler(void)
+/**
+  * @fn     I2C1_ER_IRQHandler
+  * @brief  
+  * 
+  * @param None 
+  */
+void I2C1_ER_IRQHandler(void)
 {
   serial_putchar(USART3, 'E');
   delay(1000000);
 }
 
-
-
-void
-DMA1_Stream0_IRQHandler(void)
+/**
+  * @fn     DMA1_Stream0_IRQHandler
+  * @brief  
+  * 
+  * @param None 
+  */
+void DMA1_Stream0_IRQHandler(void)
 {
   void (*handler)(void) = dma_event_handler;
   if (handler)
@@ -60,11 +80,24 @@ DMA1_Stream0_IRQHandler(void)
   delay(1000000);
 }
 
+/**
+  * @brief     Initialization and Configuration
+  *
+@verbatim   
+ ===============================================================================
+                 ##### Initialization and Configuration #####
+ ===============================================================================  
+@endverbatim
+  *
+  */
 
-static uint8_t mpu6050_reg_buffer[14];
-
-static void
-setup_i2c_for_mpu6050()
+/**
+  * @fn     setup_i2c_for_mpu6050
+  * @brief  
+  * 
+  * @param None 
+  */
+void setup_i2c_for_mpu6050()
 {
   GPIO_InitTypeDef GPIO_InitStruct;
   I2C_InitTypeDef I2C_InitStruct;
@@ -156,9 +189,13 @@ setup_i2c_for_mpu6050()
   I2C_Cmd(I2C1, ENABLE);
 }
 
-
-static void
-read_mpu6050_reg_multi(uint8_t reg, uint8_t *buf, uint32_t len)
+/**
+  * @fn     read_mpu6050_reg_multi
+  * @brief  
+  * 
+  * @param None 
+  */
+void read_mpu6050_reg_multi(uint8_t reg, uint8_t *buf, uint32_t len)
 {
   uint8_t val;
 
@@ -200,17 +237,11 @@ read_mpu6050_reg_multi(uint8_t reg, uint8_t *buf, uint32_t len)
 }
 
 
-static volatile uint32_t i2c_async_stage;
-static uint8_t i2c_async_reg;
-static uint8_t *i2c_async_buf;
-static uint32_t i2c_async_len;
-
 /*
   Handle event for async (interrupt-driven) I2C read.
   Note that this is called in interrupt context.
 */
-static void
-async_read_event_handler(void)
+void async_read_event_handler(void)
 {
   uint32_t events = I2C_GetLastEvent(I2C1);
   uint32_t stage = i2c_async_stage;
@@ -284,9 +315,13 @@ async_read_event_handler(void)
   for (;;) { }
 }
 
-
-static void
-dma_done_handler(void)
+/**
+  * @fn    dma_done_handler 
+  * @brief  
+  * 
+  * @param None 
+  */
+void dma_done_handler(void)
 {
   if (DMA_GetITStatus(DMA1_Stream0, DMA_IT_TCIF0))
   {
@@ -319,9 +354,13 @@ dma_done_handler(void)
   for (;;) { }
 }
 
-
-static void
-async_read_mpu6050_reg_multi(uint8_t reg, uint8_t *buf, uint32_t len)
+/**
+  * @fn     aync_read_mpu6050_reg_multi
+  * @brief  
+  * 
+  * @param None 
+  */
+void async_read_mpu6050_reg_multi(uint8_t reg, uint8_t *buf, uint32_t len)
 {
   dma_event_handler = dma_done_handler;
   i2c_async_event_handler = async_read_event_handler;
@@ -336,9 +375,13 @@ async_read_mpu6050_reg_multi(uint8_t reg, uint8_t *buf, uint32_t len)
   I2C_ITConfig(I2C1, I2C_IT_EVT|I2C_IT_ERR, ENABLE);
 }
 
-
-static uint8_t
-read_mpu6050_reg(uint8_t reg)
+/**
+  * @fn     read_mpu6050_reg
+  * @brief  
+  * 
+  * @param None 
+  */
+uint8_t read_mpu6050_reg(uint8_t reg)
 {
   uint8_t val;
 
@@ -346,9 +389,13 @@ read_mpu6050_reg(uint8_t reg)
   return val;
 }
 
-
-static void
-write_mpu6050_reg(uint8_t reg, uint8_t val)
+/**
+  * @fn     write_mpu6050_reg
+  * @brief  
+  * 
+  * @param None 
+  */
+void write_mpu6050_reg(uint8_t reg, uint8_t val)
 {
   I2C_GenerateSTART(I2C1, ENABLE);
   while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
@@ -369,9 +416,13 @@ write_mpu6050_reg(uint8_t reg, uint8_t val)
   I2C_GenerateSTOP(I2C1, ENABLE);
 }
 
-
-static void
-setup_mpu6050(void)
+/**
+  * @fn     setup_mpu6050
+  * @brief  
+  * 
+  * @param None 
+  */
+void setup_mpu6050(void)
 {
   for (;;)
   {
@@ -421,13 +472,54 @@ setup_mpu6050(void)
   }
 }
 
-
-static int16_t
-mpu6050_regs_to_signed(uint8_t high, uint8_t low)
+/**
+  * @fn     mpu6050_regs_to_signed
+  * @brief  
+  * 
+  * @param None 
+  */
+int16_t mpu6050_regs_to_signed(uint8_t high, uint8_t low)
 {
   uint16_t v = ((uint16_t)high << 8) | low;
   return (int16_t)v;
 }
  
-#endif /* __GIMBAL_MPU6050_H */
+/**
+  * @fn     mpu6050_GetData()
+  * @brief  
+  * 
+  * @param None 
+  */
+int16_t mpu6050_get_data(int data_type)
+{
+  
+   async_read_mpu6050_reg_multi(MPU6050_REG_ACCEL_XOUT_H, buf, 14);
+   while (i2c_async_stage != 3);
+
+
+  switch(data_type){
+    case ACCEL_X:
+      return mpu6050_regs_to_signed(buf[0], buf[7]);
+      break;
+    case ACCEL_Y:
+      return mpu6050_regs_to_signed(buf[2], buf[3]);
+      break;
+    case ACCEL_Z:
+      return mpu6050_regs_to_signed(buf[4], buf[5]);
+      break;
+    case GYRO_X:
+      return mpu6050_regs_to_signed(buf[8], buf[9]);
+      break;
+    case GYRO_Y:
+      return mpu6050_regs_to_signed(buf[10], buf[11]);
+      break;
+    case GYRO_Z:
+      return mpu6050_regs_to_signed(buf[12], buf[13]);
+      break;
+    case TEMPERATURE:
+      return mpu6050_regs_to_signed(buf[8], buf[9]);
+      break;
+  }
+  return 0;
+}
 /**********************************END OF FILE**********************************/

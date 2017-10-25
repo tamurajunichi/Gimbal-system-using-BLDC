@@ -16,10 +16,13 @@
 #include<math.h>
 #include<string.h>
 #include"stm32f4xx_conf.h"
+#include"stm32f4xx.h"
+#include"gimbal_proc.h"
 #include"gimbal_tim.h"
 #include"gimbal_usart.h"
 #include"gimbal_mpu6050.h"
-#include"gimbal_calc.h"
-#include"gimbal_conf.h"
+#include"gimbal_ctr.h"
 
-#endif /*__GIMBAL_STM32_H
+
+
+#endif /*__GIMBAL_STM32_H */
