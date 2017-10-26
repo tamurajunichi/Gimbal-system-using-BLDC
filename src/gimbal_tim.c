@@ -197,7 +197,7 @@ void setup_timer()
   TIM_TimeBaseInitTypeDef TIM_BaseStruct;
   TIM_BaseStruct.TIM_Prescaler = CLOCK / 1000000 - 1 ;
   TIM_BaseStruct.TIM_CounterMode = TIM_CounterMode_Up;
-  TIM_BaseStruct.TIM_Period = 1000;
+  TIM_BaseStruct.TIM_Period = 100;
   TIM_BaseStruct.TIM_ClockDivision = TIM_CKD_DIV1;
   TIM_BaseStruct.TIM_RepetitionCounter = 0;
 

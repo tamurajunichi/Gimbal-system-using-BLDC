@@ -27,7 +27,8 @@ void data_init()
   duty_phaseV = 0;
   duty_phaseW = 0;
 
-  serial_puts(USART3,"\nTIME\tANGLE_X\tANGLE_Y\tANGLE_Z\n");
+  serial_puts(USART3,"\nTIME\tANGLE_X\tANGLE_Y\tACCEL_X\tACCEL_Y\tACCEL_Z\t");
+  serial_puts(USART3,"GYRO_X\tGYRO_Y\tGYRO_Z\n");
 }
 
 /**
@@ -45,11 +46,24 @@ void data_processing(uint32_t tim2_count)
  }else if((tim2_count - print_Time) >= PRINTTIME){
    print_Time = tim2_count;
 
-   print_float(USART3,(float)print_Time/1000.0,5,1);
-   serial_puts(USART3,"\t");
+  if((print_Time/10000.0) >= 30.0 && (print_Time/10000.0) <= 30.1)serial_puts(USART3,"STABILITY\n");
+   print_float(USART3,(float)print_Time/10000.0,5,4);
+   serial_puts(USART3,",");
    print_float(USART3,angle_x,3,3);
-   serial_puts(USART3,"\t");
+   serial_puts(USART3,",");
    print_float(USART3,angle_y,3,3);
+   serial_puts(USART3,",");
+   print_float(USART3,accel_x,3,3);
+   serial_puts(USART3,",");
+   print_float(USART3,accel_y,3,3);
+   /*serial_puts(USART3,",");
+   print_float(USART3,accel_z,3,3);
+   serial_puts(USART3,",");
+   print_float(USART3,gyro_x,5,3);
+   serial_puts(USART3,",");
+   print_float(USART3,gyro_y,5,3);*/
+   serial_puts(USART3,",");
+   print_float(USART3,gyro_z,5,3);
    //serial_puts(USART3,"\t");
    //print_float(USART3,angle_z,3,3);
    serial_puts(USART3,"\n");

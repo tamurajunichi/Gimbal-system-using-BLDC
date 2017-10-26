@@ -16,8 +16,8 @@
 #include "gimbal_stm32.h"
 
 /* Define macro ---------------------------------------------------------------*/
-#define WAITTIME 10
-#define PRINTTIME 100
+#define WAITTIME 30
+#define PRINTTIME 50
 #define SINE_ARRAY_MAX 359
 
 /* Variable -------------------------------------------------------------------*/
