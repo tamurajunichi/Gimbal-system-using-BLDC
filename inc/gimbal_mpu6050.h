@@ -58,6 +58,8 @@
 #define GYRO_Y      4
 #define GYRO_Z      5
 #define TEMPERATURE 6
+
+#define I2C_CLK 400000
 /* Define variable ------------------------------------------------------------*/
 uint8_t mpu6050_reg_buffer[14];
 volatile uint32_t i2c_async_stage;
