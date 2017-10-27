@@ -16,24 +16,24 @@
 #include "gimbal_stm32.h"
 
 /* Define macro ---------------------------------------------------------------*/
-#define WAITTIME 30
-#define PRINTTIME 50
+#define WAITTIME 100
+#define PRINTTIME 200
 #define SINE_ARRAY_MAX 359
 
 /* Variable -------------------------------------------------------------------*/
 uint32_t samp_Time,print_Time;
-float temp,angle_x,angle_y,angle_z,accel_x,accel_y,accel_z,gyro_x,gyro_y,gyro_z;
+float temp,angle_x,angle_y,angle_z,accel_x[1],accel_y[1],accel_z[1],gyro_x,gyro_y,gyro_z;
 float duty_PhaseU,duty_PhaseV,duty_PhaseW;
-int   phaseU,phaseV,phaseW;
+int   phaseU,phaseV,phaseW,i;
 
 /* Functions ------------------------------------------------------------------*/
 void data_init();
 void data_processing(uint32_t tim2_count);
 
 void proc_mpu6050();
-float proc_angle_z(float gyro_z);
-float proc_angle_x(float accel_x);
-float proc_angle_y(float accel_y);
+void proc_angle_z();
+void proc_angle_x();
+void proc_angle_y();
 
 float get_angle_x();
 float get_angle_y();

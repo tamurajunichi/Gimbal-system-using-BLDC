@@ -40,8 +40,6 @@
 #define RCC_APB2_TIM ((uint32_t)RCC_APB2Periph_TIM1 | RCC_APB2Periph_TIM8)
 
 /* Variable -------------------------------------------------------------------*/
-int __errno;
-
 uint32_t TIM2_Count;
 
 /* Functions ------------------------------------------------------------------*/

@@ -1,54 +1,120 @@
-# put your *.o targets here, make should handle the rest!
+#######################################
+# Options
+#######################################
+PROJECT_NAME := stm32f4_template_project
+OUTPUT_DIR := build
 
-SRCS = main.c stm32f4xx_it.c system_stm32f4xx.c gimbal_mpu6050.c gimbal_tim.c \
-       gimbal_usart.c gimbal_proc.c gimbal_ctr.c gimbal_filter.c
-# all the files will be generated with this name (main.elf, main.bin, main.hex, etc)
+CC := arm-none-eabi-gcc
+CXX := arm-none-eabi-g++
+LD := arm-none-eabi-g++
+AS := arm-none-eabi-gcc
+OBJCOPY := arm-none-eabi-objcopy
+SIZE := arm-none-eabi-size
 
-PROJ_NAME=main
+INCLUDE := \
+	-Iinc \
+	-Ilib/CMSIS/Device/Include \
+	-Ilib/CMSIS/Include \
+	-Ilib/FreeRTOS/include \
+	-Ilib/FreeRTOS/portable \
+	-Ilib/STM32F4xx_StdPeriph_Driver/inc
 
-# that's it, no need to change anything below this line!
+DEFINE_MACRO := \
+	-DSTM32F40_41xxx \
+	-DSTM32F407xx \
+	-DARM_MATH_CM4 \
+	-D__FPU_PRESENT \
+	-DHSE_VALUE=8000000 \
+	-DUSE_STDPERIPH_DRIVER \
+	-DDEBUG 
 
-###################################################
+TARGET_ARCH := \
+	-mcpu=cortex-m4 \
+	-mthumb \
+	-mfloat-abi=hard \
+	-mfpu=fpv4-sp-d16
 
-CC=arm-none-eabi-gcc
-OBJCOPY=arm-none-eabi-objcopy
+CFLAGS :=  $(TARGET_ARCH) $(DEFINE_MACRO) \
+	-O0 -g3 -Wall \
+	-fmessage-length=0 \
+	-fsigned-char \
+	-ffunction-sections \
+	-fdata-sections \
+	-mslow-flash-data
 
-CFLAGS  = -g -O0 -Wall -Tstm32_flash.ld 
-CFLAGS += -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork -D"__FPU_PRESENT=1"
-CFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16
+CXXFLAGS := $(CFLAGS) \
+	-fno-use-cxa-atexit \
+	-fno-exceptions \
+	-fno-rtti \
+	-fno-threadsafe-statics \
+	-std=c++11 \
+	-include stdint.h
 
-###################################################
+ASFLAGS := -x assembler-with-cpp -c $(CFLAGS)
 
-vpath %.c src
-vpath %.a lib
+LDFLAGS := $(TARGET_ARCH) -T LinkerScript.ld -Wl,--gc-sections
+LDLIBS := -lm
 
-ROOT=$(shell pwd)
 
-CFLAGS += -Iinc -Ilib -Ilib/inc 
-CFLAGS += -Ilib/inc/core -Ilib/inc/peripherals 
+#######################################
+# Dependencies
+#######################################
+C_SRCS := $(wildcard src/*.c) \
+	$(wildcard lib/CMSIS/Device/Source/*.c) \
+	$(wildcard lib/FreeRTOS/*.c) \
+	$(wildcard lib/FreeRTOS/portable/*.c) \
+	lib/FreeRTOS/portable/MemMang/heap_3.c \
+	$(wildcard lib/STM32F4xx_StdPeriph_Driver/src/*.c)
 
-SRCS += lib/startup_stm32f4xx.s # add startup file to build
+C_SRCS := $(filter-out %/stm32f4xx_fmc.c, $(C_SRCS))
 
-OBJS = $(SRCS:.c=.o)
+#CPP_SRCS := $(wildcard src/*.cpp) 
 
-###################################################
+ASM_SRCS := $(wildcard src/*.s) \
+	lib/CMSIS/Device/Source/startup_stm32f407xx.s
 
-.PHONY: lib proj
+OBJS := $(patsubst %,$(OUTPUT_DIR)/%, $(C_SRCS:.c=.o) $(CPP_SRCS:.cpp=.o) $(ASM_SRCS:.s=.o))
+DEPS := $(OBJS:.o=.d)
 
-all: lib proj
 
-lib:
-	$(MAKE) -C lib
+#######################################
+# Targets
+#######################################
+.PHONY: all clean
 
-proj: 	$(PROJ_NAME).elf
+all: $(OUTPUT_DIR) $(OUTPUT_DIR)/$(PROJECT_NAME).elf
 
-$(PROJ_NAME).elf: $(SRCS)
-	$(CC) $(CFLAGS) $^ -o $@ -Llib -lstm32f4
-	$(OBJCOPY) -O ihex $(PROJ_NAME).elf $(PROJ_NAME).hex
-	$(OBJCOPY) -O binary $(PROJ_NAME).elf $(PROJ_NAME).bin
+$(OUTPUT_DIR):
+	@mkdir $(OUTPUT_DIR)
+
+$(OUTPUT_DIR)/$(PROJECT_NAME).elf: $(OBJS)
+	@echo "LD $@"
+	@$(LD) $(LDFLAGS) $(LDLIBS) -Wl,-Map,$(@:.elf=.map) -o $@ $^
+	@$(OBJCOPY) -O ihex $@ $(@:.elf=.hex)
+	@$(OBJCOPY) -O binary $@ $(@:.elf=.bin)
+	@$(SIZE) $@
+
+$(OUTPUT_DIR)/%.o: %.c
+	@echo "CC $<"
+	@if [ ! -d $(dir $@) ]; then mkdir -p $(dir $@); fi
+	@$(CC) $(CFLAGS) $(INCLUDE) -MMD -MP -MF$(@:.o=.d) -MT$@ -o $@ -c $<
+
+#$(OUTPUT_DIR)/%.o: %.cpp
+#	@echo "CXX $<"
+#	@if [ ! -d $(dir $@) ]; then mkdir -p $(dir $@); fi
+#	@$(CXX) $(CXXFLAGS) $(INCLUDE) -MMD -MP -MF$(@:.o=.d) -MT$@ -o $@ -c $<
+
+$(OUTPUT_DIR)/%.o: %.s
+	@echo "AS $<"
+	@if [ ! -d $(dir $@) ]; then mkdir -p $(dir $@); fi
+	@$(AS) $(ASFLAGS) -MMD -MP -MF$(@:.o=.d) -MT$@ -o $@ -c $<
+
+.clang_complete: Makefile
+	@echo $(INCLUDE) $(DEFINE_MACRO) | tr " " "\n" > $@
 
 clean:
-	$(MAKE) -C lib clean
-	rm -f $(PROJ_NAME).elf
-	rm -f $(PROJ_NAME).hex
-	rm -f $(PROJ_NAME).bin
+	@rm -rf $(OUTPUT_DIR)/*
+
+
+-include $(DEPS)
+
