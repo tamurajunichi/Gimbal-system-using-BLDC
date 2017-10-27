@@ -218,43 +218,43 @@ void setup_tim_gpio()
   GPIO_InitTypeDef GPIO_InitStruct;
 
   GPIO_PinAFConfig(GPIOB,GPIO_PinSource7,GPIO_AF_TIM3);
-	GPIO_PinAFConfig(GPIOB,GPIO_PinSource8,GPIO_AF_TIM3);
-	GPIO_PinAFConfig(GPIOB,GPIO_PinSource9,GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOB,GPIO_PinSource8,GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOB,GPIO_PinSource9,GPIO_AF_TIM3);
   GPIO_PinAFConfig(GPIOD,GPIO_PinSource13,GPIO_AF_TIM4);
   GPIO_PinAFConfig(GPIOD,GPIO_PinSource14,GPIO_AF_TIM4);
-	GPIO_PinAFConfig(GPIOD,GPIO_PinSource15,GPIO_AF_TIM4);
-	GPIO_PinAFConfig(GPIOA,GPIO_PinSource2,GPIO_AF_TIM5);
-	GPIO_PinAFConfig(GPIOA,GPIO_PinSource3,GPIO_AF_TIM5);
-	GPIO_PinAFConfig(GPIOA,GPIO_PinSource4,GPIO_AF_TIM5);
+  GPIO_PinAFConfig(GPIOD,GPIO_PinSource15,GPIO_AF_TIM4);
+  GPIO_PinAFConfig(GPIOA,GPIO_PinSource2,GPIO_AF_TIM5);
+  GPIO_PinAFConfig(GPIOA,GPIO_PinSource3,GPIO_AF_TIM5);
+  GPIO_PinAFConfig(GPIOA,GPIO_PinSource4,GPIO_AF_TIM5);
 
-	GPIO_InitStruct.GPIO_Pin = TIM3_GPIO_PIN;
-	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_Init(GPIOB,&GPIO_InitStruct);
+  GPIO_InitStruct.GPIO_Pin = TIM3_GPIO_PIN;
+  GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
+  GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+  GPIO_Init(GPIOB,&GPIO_InitStruct);
 
-	GPIO_InitStruct.GPIO_Pin = TIM4_GPIO_PIN;
-	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_Init(GPIOD,&GPIO_InitStruct);
+  GPIO_InitStruct.GPIO_Pin = TIM4_GPIO_PIN;
+  GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
+  GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+  GPIO_Init(GPIOD,&GPIO_InitStruct);
 
 
-	GPIO_InitStruct.GPIO_Pin = TIM5_GPIO_PIN;
-	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_Init(GPIOA,&GPIO_InitStruct);
+  GPIO_InitStruct.GPIO_Pin = TIM5_GPIO_PIN;
+  GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
+  GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+  GPIO_Init(GPIOA,&GPIO_InitStruct);
 
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_12;
-	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_Init(GPIOD,&GPIO_InitStruct);
+  GPIO_InitStruct.GPIO_Pin = GPIO_Pin_12;
+  GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
+  GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+  GPIO_Init(GPIOD,&GPIO_InitStruct);
 
 }
 
