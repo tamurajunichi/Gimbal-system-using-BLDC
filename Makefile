@@ -1,7 +1,7 @@
 # put your *.o targets here, make should handle the rest!
 
 SRCS = main.c stm32f4xx_it.c system_stm32f4xx.c gimbal_mpu6050.c gimbal_tim.c \
-       gimbal_conf.c gimbal_usart.c gimbal_proc.c gimbal_ctr.c
+       gimbal_usart.c gimbal_proc.c gimbal_ctr.c gimbal_filter.c
 # all the files will be generated with this name (main.elf, main.bin, main.hex, etc)
 
 PROJ_NAME=main
