@@ -49,7 +49,7 @@ void data_processing(uint32_t tim2_count)
   if((tim2_count - samp_Time) >= WAITTIME){
     samp_Time = tim2_count;
 
-    calc_mpu6050();
+    proc_mpu6050();
  }else if((tim2_count - print_Time) >= PRINTTIME){
    print_Time = tim2_count;
 
@@ -78,12 +78,12 @@ void data_processing(uint32_t tim2_count)
 }
 
 /**
-  * @fn     calc_mpu6050
+  * @fn     proc_mpu6050
   * @bried  processing of accel and gyro data
   * 
   * @param  None
   */
-void calc_mpu6050()
+void proc_mpu6050()
 {
   accel_x = (float)mpu6050_get_data(ACCEL_X)/(float)2048;
   accel_y = (float)mpu6050_get_data(ACCEL_Y)/(float)2048;
