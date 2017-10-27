@@ -23,15 +23,16 @@ float sine_Array[]={0.50 ,	0.51 ,	0.52 ,	0.53 ,	0.53 ,	0.54 ,	0.55 ,	0.56 ,	0.57
   */
 void data_init()
 {
-  samp_Time = 0;
-  print_Time = 0;
   angle_z = 0;
   phaseU      = 0;
   phaseV      = 120;
   phaseU      = 240;
-  duty_phaseU = 0;
-  duty_phaseV = 0;
-  duty_phaseW = 0;
+  duty_PhaseU = 0;
+  duty_PhaseV = 0;
+  duty_PhaseW = 0;
+  
+  samp_Time = tim2_count;
+  print_Time = tim2_count;
 
   serial_puts(USART3,"\nTIME\tANGLE_X\tANGLE_Y\tACCEL_X\tACCEL_Y\tACCEL_Z\t");
   serial_puts(USART3,"GYRO_X\tGYRO_Y\tGYRO_Z\n");
@@ -97,6 +98,25 @@ void calc_mpu6050()
   angle_y = (float)atan( accel_y / sqrt(pow(accel_x,2) + pow(accel_z,2))) * 180.0 / M_PI;
   //angle_z += (float)calc_angle_z(gyro_z);
 }
+/**
+  * @fn     proc_angle_x
+  * @bried  processing of data
+  * 
+  * @param  accel_x
+  */
+float proc_angle_x(float accel_x)
+{
+}
+
+/**
+  * @fn     proc_angle_y
+  * @bried  processing of data
+  * 
+  * @param  accel_y
+  */
+float proc_angle_y(float accel_y)
+{
+}
 
 /**
   * @fn     calc_angle_z
@@ -104,10 +124,10 @@ void calc_mpu6050()
   * 
   * @param  gyro_z
   */
-float calc_angle_z(float gyro_z)
+float proc_angle_z(float gyro_z)
 {
-  return gyro_z * (float)(samp_Time/100.0);
 }
+
 
 /**
   * @fn     get_angle_x
@@ -129,6 +149,17 @@ float get_angle_x()
 float get_angle_y()
 {
   return angle_y;
+}
+
+/**
+  * @fn     get_angle_y
+  * @bried  
+  * 
+  * @param  None
+  */
+float get_angle_z()
+{
+  return angle_z;
 }
 
 /**
@@ -156,9 +187,9 @@ void generate_sine_pwm()
   if(phaseU < 0)phaseU = SINE_ARRAY_MAX;
   if(phaseV < 0)phaseV = SINE_ARRAY_MAX;
   if(phaseW < 0)phaseW = SINE_ARRAY_MAX;
-  duty_phaseU = CARRIER_TIM_PERIOD*sine_Array[phaseU];
-  duty_phaseV = CARRIER_TIM_PERIOD*sine_Array[phaseV];
-  duty_phaseW = CARRIER_TIM_PERIOD*sine_Array[phaseW];
+  duty_PhaseU = CARRIER_TIM_PERIOD*sine_Array[phaseU];
+  duty_PhaseV = CARRIER_TIM_PERIOD*sine_Array[phaseV];
+  duty_PhaseW = CARRIER_TIM_PERIOD*sine_Array[phaseW];
   TIM_SetCompare2(TIM4,(uint32_t)duty_phaseU);
   TIM_SetCompare3(TIM4,(uint32_t)duty_phaseV);
   TIM_SetCompare4(TIM4,(uint32_t)duty_phaseW);
