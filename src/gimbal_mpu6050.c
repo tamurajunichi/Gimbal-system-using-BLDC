@@ -155,7 +155,7 @@ void setup_i2c_for_mpu6050()
   DMA_DeInit(DMA1_Stream0);
   DMA_Init(DMA1_Stream0, &DMA_InitStructure);
 
-  I2C_InitStruct.I2C_ClockSpeed = 400000;
+  I2C_InitStruct.I2C_ClockSpeed = I2C_CLK;
   I2C_InitStruct.I2C_Mode = I2C_Mode_I2C;
   I2C_InitStruct.I2C_DutyCycle = I2C_DutyCycle_2;
   I2C_InitStruct.I2C_OwnAddress1 = 0x00;
