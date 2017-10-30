@@ -1,7 +1,7 @@
 #######################################
 # Options
 #######################################
-PROJECT_NAME := stm32f4_template_project
+PROJECT_NAME := main
 OUTPUT_DIR := build
 
 CC := arm-none-eabi-gcc
@@ -60,7 +60,7 @@ LDLIBS := -lm
 # Dependencies
 #######################################
 C_SRCS := $(wildcard src/*.c) \
-	$(wildcard lib/CMSIS/Device/Source/*.c) \
+	$(wildcard lib/CMSIS/DSP_Lib/Source/*/*.c) \
 	$(wildcard lib/FreeRTOS/*.c) \
 	$(wildcard lib/FreeRTOS/portable/*.c) \
 	lib/FreeRTOS/portable/MemMang/heap_3.c \

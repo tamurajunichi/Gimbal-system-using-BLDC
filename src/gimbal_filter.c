@@ -23,10 +23,9 @@
   * @param p_pre_val  
   * @param p_val      
   */
-void filter_ema(float* p_val)
+float filter_ema(float32_t val, float32_t pre_val)
 {
-  p_val[1] = (p_val[0] * EMA_K) + (p_val[1] * (1 - EMA_K));
-  p_val[0] = p_val[1];
+   return(val * (float32_t)EMA_K) + (pre_val * (float32_t)(1 - EMA_K));
 }
 
 /**********************************END OF FILE**********************************/

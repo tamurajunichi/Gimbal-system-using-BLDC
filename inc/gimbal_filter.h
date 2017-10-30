@@ -18,10 +18,10 @@
 /* Define macro ---------------------------------------------------------------*/
 #define EMA_K 0.6
 /* Variable -------------------------------------------------------------------*/
-float ema_val,pre_ema_val;
+float32_t ema_val,pre_ema_val;
 /* Functions ------------------------------------------------------------------*/
-void filter_ema(float* p_val);
-float filter_sma(float* p_val_array);
+float32_t filter_ema(float32_t val, float32_t pre_val);
+float32_t filter_sma(float32_t* p_val_array);
 
 #endif /* __GIMBAL_FILTER_H */
 /**********************************END OF FILE**********************************/

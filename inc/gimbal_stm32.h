@@ -13,14 +13,13 @@
 #define __GIMBAL_STM32_H
 
 /* Includes ------------------------------------------------------------------*/
-#include<math.h>
-#include<string.h>
-#include"arm_math.h"
+#include<arm_math.h>
 #include"stm32f4xx_conf.h"
 #include"stm32f4xx.h"
+#include"usart.h"
+#include"my_math.h"
 #include"gimbal_proc.h"
 #include"gimbal_tim.h"
-#include"gimbal_usart.h"
 #include"gimbal_mpu6050.h"
 #include"gimbal_ctr.h"
 #include"gimbal_filter.h"

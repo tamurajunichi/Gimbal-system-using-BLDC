@@ -30,8 +30,8 @@ build/src/gimbal_tim.o: src/gimbal_tim.c inc/gimbal_tim.h \
  lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h \
  lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h \
  lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
- lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h inc/gimbal_proc.h \
- inc/gimbal_tim.h inc/gimbal_usart.h inc/gimbal_mpu6050.h \
+ lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h inc/usart.h \
+ inc/my_math.h inc/gimbal_proc.h inc/gimbal_tim.h inc/gimbal_mpu6050.h \
  inc/gimbal_ctr.h inc/gimbal_filter.h
 
 inc/gimbal_tim.h:
@@ -112,11 +112,13 @@ lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h:
 
 lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h:
 
+inc/usart.h:
+
+inc/my_math.h:
+
 inc/gimbal_proc.h:
 
 inc/gimbal_tim.h:
-
-inc/gimbal_usart.h:
 
 inc/gimbal_mpu6050.h:
 
