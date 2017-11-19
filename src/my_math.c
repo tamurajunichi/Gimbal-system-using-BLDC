@@ -142,3 +142,17 @@ float32_t mypowf(float32_t src,uint32_t n)
   }
   return src;
 }
+
+void round_3(float32_t* val)
+{
+  int a;
+  if(*val > 0){
+    a = (int)((*val)*10.0f + 0.5f);
+    *val = (float32_t)a / 10.0f;
+    if(*val < 0.1f)*val = 0.0f;
+  }else{
+    a = (int)((*val)*10.0f-0.4f);
+    *val = (float32_t)a / 10.0f;
+    if(*val > -0.1f)*val = 0.0f;
+  }
+}

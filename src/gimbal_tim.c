@@ -50,7 +50,7 @@ void TIM1_UP_TIM10_IRQHandler()
   if(TIM_GetITStatus(TIM1,TIM_IT_Update) != RESET)
   {
     TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
-    generate_sine_pwm();
+    generate_sine_pwm(get_angle_x(),TIM4);
   }
 }
 
@@ -116,12 +116,13 @@ void tim_init()
   setup_carrier(TIM3);
   setup_carrier(TIM4);
   setup_carrier(TIM5);
-  
+ 
   setup_tim_nvic();
 
   setup_sine(TIM1);
   setup_sine(TIM7);
   setup_sine(TIM8);
+
   setup_timer();
   
 }
@@ -173,7 +174,7 @@ void setup_sine(TIM_TypeDef* TIMx)
 {
   TIM_TimeBaseInitTypeDef TIM_BaseStruct;
   /*84000000 / (pre + 1) = 10kHz */
-  TIM_BaseStruct.TIM_Prescaler = 839;
+  TIM_BaseStruct.TIM_Prescaler = 83;
   TIM_BaseStruct.TIM_CounterMode = TIM_CounterMode_Up;
   /*100000 / freq = TIM_Period + 1*/
   TIM_BaseStruct.TIM_Period = SINE_TIM_PERIOD;
@@ -314,5 +315,27 @@ void setup_tim_rcc()
 uint32_t tim2_get_time()
 {
   return TIM2_Count;
+}
+
+/**
+  *@fn      
+  *@brief   timer function 
+  *
+  *@param   None
+  */
+int32_t resetup_sine(TIM_TypeDef* TIMx,int tim_period)
+{
+  TIM_TimeBaseInitTypeDef TIM_BaseStruct;
+  TIM_BaseStruct.TIM_Prescaler = 4;
+  TIM_BaseStruct.TIM_CounterMode = TIM_CounterMode_Up;
+  TIM_BaseStruct.TIM_Period = tim_period;
+  TIM_BaseStruct.TIM_ClockDivision = TIM_CKD_DIV1;
+  TIM_BaseStruct.TIM_RepetitionCounter = 0;
+
+  TIM_TimeBaseInit(TIMx,&TIM_BaseStruct);
+  TIM_ITConfig(TIMx,TIM_IT_Update,ENABLE);
+  TIM_Cmd(TIMx,ENABLE);
+
+  return tim_period;
 }
 /**********************************END OF FILE**********************************/

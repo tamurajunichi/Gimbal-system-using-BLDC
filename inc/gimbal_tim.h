@@ -58,6 +58,7 @@ void setup_timer();
 void setup_tim_nvic();
 void setup_tim_gpio();
 void setup_tim_rcc();
+int32_t resetup_sine(TIM_TypeDef* TIMx, int tim_period);
 
 uint32_t tim2_get_time();
 

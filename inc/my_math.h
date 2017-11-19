@@ -26,5 +26,6 @@
 float myAtan(float32_t x);
 float myAtan2(float32_t y,float32_t x);
 float32_t mypowf(float32_t src,uint32_t n);
+void round_3(float32_t* val);
 #endif /* __MY_MATH_H */
 /**********************************END OF FILE**********************************/

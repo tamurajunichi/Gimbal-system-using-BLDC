@@ -2,20 +2,21 @@
 
 int main()
 {
+  uint8_t res;
   setup_serial();
   data_init();
+  filter_init();
+  ctr_init();
   tim_init();
   delay(2000000);
   setup_i2c_for_mpu6050();
   delay(2000000);
   setup_mpu6050();
-
-  /*
+  
   res = read_mpu6050_reg(MPU6050_REG_WHOAMI);
   serial_output_hexbyte(USART3, res);
   res = read_mpu6050_reg(MPU6050_REG_PWR_MGMT_1);
   serial_output_hexbyte(USART3, res);
-  */
 
   while (1)
   {

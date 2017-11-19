@@ -59,7 +59,10 @@ void I2C1_EV_IRQHandler(void)
 void I2C1_ER_IRQHandler(void)
 {
   serial_putchar(USART3, 'E');
-  delay(1000000);
+  setup_i2c_for_mpu6050();
+  delay(2000000);
+  setup_mpu6050();
+  
 }
 
 /**
@@ -457,7 +460,7 @@ void setup_mpu6050(void)
     write_mpu6050_reg(MPU6050_REG_GYRO_CONFIG, 3 << 3);
     write_mpu6050_reg(MPU6050_REG_ACCEL_CONFIG, 3 << 3);
     /* Disable the Fifo (write 0xf8 to enable temp+gyros_accel). */
-    write_mpu6050_reg(MPU6050_REG_FIFO_EN, 0x00);
+    write_mpu6050_reg(MPU6050_REG_FIFO_EN, 0xf8);
     /*
       Interrupt. Active high, push-pull, hold until cleared, cleared only on
       read of status.
@@ -493,13 +496,11 @@ int16_t mpu6050_regs_to_signed(uint8_t high, uint8_t low)
 int16_t mpu6050_get_data(int data_type)
 {
   
-   async_read_mpu6050_reg_multi(MPU6050_REG_ACCEL_XOUT_H, buf, 14);
-   while (i2c_async_stage != 3);
-
-
   switch(data_type){
     case ACCEL_X:
-      return mpu6050_regs_to_signed(buf[0], buf[7]);
+      async_read_mpu6050_reg_multi(MPU6050_REG_ACCEL_XOUT_H, buf, 14);
+      while (i2c_async_stage != 3);
+      return mpu6050_regs_to_signed(buf[0], buf[1]);
       break;
     case ACCEL_Y:
       return mpu6050_regs_to_signed(buf[2], buf[3]);
@@ -517,7 +518,7 @@ int16_t mpu6050_get_data(int data_type)
       return mpu6050_regs_to_signed(buf[12], buf[13]);
       break;
     case TEMPERATURE:
-      return mpu6050_regs_to_signed(buf[8], buf[9]);
+      return mpu6050_regs_to_signed(buf[6], buf[7]);
       break;
   }
   return 0;

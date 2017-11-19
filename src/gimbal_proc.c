@@ -23,7 +23,6 @@ const float32_t sine_Array[]={0.50 ,	0.51 ,	0.52 ,	0.53 ,	0.53 ,	0.54 ,	0.55 ,	0
   */
 void data_init()
 {
-  angle_z = 0;
   phaseU      = 0;
   phaseV      = 120;
   phaseU      = 240;
@@ -31,12 +30,25 @@ void data_init()
   duty_PhaseV = 0;
   duty_PhaseW = 0;
 
-  accel_x = 0;
-  accel_y = 0;
-  accel_z = 0;
-  
   pre_accel_x = 0;
   pre_accel_y = 0;
+
+  gyro_angle_x = 0;
+  gyro_angle_y = 0;
+  gyro_angle_z = 0;
+
+  pre_angle_x = 0;
+  pre_angle_y = 0;
+
+  offset_ay = 0;
+  offset_az = 0;
+  offset_gx = 0;
+  offset_gy = 0;
+  offset_gz = 0;
+
+  flag = 0;
+  dbg_period = 0;
+
 
   samp_Time = tim2_get_time();
   print_Time = tim2_get_time();
@@ -58,29 +70,28 @@ void data_processing(uint32_t tim2_count)
     samp_Time = tim2_count;
 
     proc_mpu6050();
- }else if((tim2_count - print_Time) >= PRINTTIME){
-   print_Time = tim2_count;
 
-  if((print_Time/10000.0f) >= 30.0f && (print_Time/10000.0f) <= 30.1f)serial_puts(USART3,"STABILITY\n");
-   print_float(USART3,(float32_t)print_Time/10000.0f,5,4);
+   print_float(USART3,(float32_t)samp_Time/10000.0f,5,3);
    serial_puts(USART3,",");
    print_float(USART3,angle_x,3,3);
-   serial_puts(USART3,",");
+  /* serial_puts(USART3,",");
    print_float(USART3,angle_y,3,3);
+   serial_puts(USART3,",");
+   print_float(USART3,angle_z,3,3);
    serial_puts(USART3,",");
    print_float(USART3,accel_x,3,3);
    serial_puts(USART3,",");
    print_float(USART3,accel_y,3,3);
    serial_puts(USART3,",");
    print_float(USART3,accel_z,3,3);
-   /*serial_puts(USART3,",");
+   serial_puts(USART3,",");
    print_float(USART3,gyro_x,5,3);
    serial_puts(USART3,",");
-   print_float(USART3,gyro_y,5,3);*/
+   print_float(USART3,gyro_y,5,3);
    serial_puts(USART3,",");
-   print_float(USART3,gyro_z,5,3);
-   //serial_puts(USART3,"\t");
-   //print_float(USART3,angle_z,3,3);
+   print_float(USART3,gyro_z,5,3);*/
+   serial_puts(USART3,",");
+   print_int32(USART3,dbg_period);
    serial_puts(USART3,"\n");
  }
 }
@@ -93,59 +104,82 @@ void data_processing(uint32_t tim2_count)
   */
 void proc_mpu6050()
 {
-  float32_t sqrt;
-  accel_x = (float32_t)mpu6050_get_data(ACCEL_X)/2048.0f;
-  accel_y = (float32_t)mpu6050_get_data(ACCEL_Y)/2048.0f;
-  accel_z = (float32_t)mpu6050_get_data(ACCEL_Z)/2048.0f;
-  gyro_x  = (float32_t)mpu6050_get_data(GYRO_X)/(3268.0f/2000.0f);
-  gyro_y  = (float32_t)mpu6050_get_data(GYRO_Y)/(3268.0f/2000.0f);
-  gyro_z  = (float32_t)mpu6050_get_data(GYRO_Z)/(3268.0f/2000.0f);
-  temp    = (float32_t)mpu6050_get_data(TEMPERATURE)/340.0f+36.53f;
 
-  proc_angle_x();
-  proc_angle_y();
-  arm_sqrt_f32((accel_y*accel_y + accel_z*accel_z),&sqrt);
-  angle_x = myAtan(accel_x/sqrt) * 180.0f / PI;
-  arm_sqrt_f32((accel_x*accel_x + accel_z*accel_z),&sqrt);
-  angle_y = myAtan(accel_y/sqrt) * 180.0f / PI;
-  /* calculation angle x y z */
-  //angle_z += (float)calc_angle_z(gyro_z);
+  accel_x = (float32_t)(mpu6050_get_data(ACCEL_X)/2048.0f)-offset_ax;
+  accel_y = (float32_t)(mpu6050_get_data(ACCEL_Y)/2048.0f)-offset_ay;
+  accel_z = (float32_t)mpu6050_get_data(ACCEL_Z)/2048.0f;
+  gyro_x  = (float32_t)(mpu6050_get_data(GYRO_X)/16.4f)-offset_gx;
+  gyro_y  = (float32_t)(mpu6050_get_data(GYRO_Y)/16.4f)-offset_gy;
+  gyro_z  = (float32_t)(mpu6050_get_data(GYRO_Z)/16.4f)-offset_gz;
+  temp    = (float32_t)mpu6050_get_data(TEMPERATURE)/340.0f+36.53f;
+  
+  if(flag == 0){
+    del_accel_offset(accel_x,accel_y,&offset_ax,&offset_ay);
+    flag = del_gyro_offset(gyro_x,gyro_y,gyro_z,&offset_gx,&offset_gy,&offset_gz);
+  }else{
+  proc_accel_angle();
+  proc_angle();
+  dbg_period = resetup_sine(TIM1,pid_ctr(angle_y,samp_Time,TIM1));
+  }
+
 }
+
 /**
   * @fn     proc_angle_x
   * @bried  processing of data
   * 
   * @param  accel_x
   */
-void proc_angle_x()
+void proc_accel_angle()
 {
-  accel_x = filter_ema(accel_x,pre_accel_x);
-  pre_accel_x = accel_x;
+  float32_t sqrt;
+
+  //accel_x = filter_ema(accel_x,pre_accel_x);
+  //pre_accel_x = accel_x;
+  arm_sqrt_f32((accel_y*accel_y + accel_z*accel_z),&sqrt);
+  accel_angle_x = myAtan(accel_x/sqrt) * 180.0f / PI;
+
+  //accel_y = filter_ema(accel_y,pre_accel_y);
+  //pre_accel_y = accel_y;
+  arm_sqrt_f32((accel_x*accel_x + accel_z*accel_z),&sqrt);
+  accel_angle_y = myAtan(accel_y/sqrt) * 180.0f / PI;
 }
 
 /**
-  * @fn     proc_angle_y
+  * @fn     proc_angle_x
   * @bried  processing of data
   * 
-  * @param  accel_y
+  * @param  accel_x
   */
-void proc_angle_y()
-{
-  accel_y = filter_ema(accel_y,pre_accel_y);
-  pre_accel_y = accel_y;
+void proc_gyro_angle()
+{  
+  gyro_angle_x += gyro_x * 0.005f;
+  gyro_angle_y += gyro_y * 0.005f;
+
 }
 
 /**
-  * @fn     calc_angle_z
+  * @fn     proc_angle_x
   * @bried  processing of data
   * 
-  * @param  gyro_z
+  * @param  accel_x
   */
-void proc_angle_z()
-{
+void proc_angle()
+{  
+  
+    
+  angle_x = 0.97f * (pre_angle_x + gyro_x * (100.0f / 10000.0f)) + 0.03f * accel_angle_x;
+  angle_y = 0.92f * (pre_angle_y + gyro_y * (100.0f / 10000.0f)) + 0.08f * accel_angle_y;
+  angle_z = gyro_z * ( 100.0f / 10000.0f );
 
+  pre_angle_x = angle_x;
+  pre_angle_y = angle_y;
+  
+/*
+  angle_x = filter_kalman(accel_angle_x, gyro_angle_x);
+  angle_y = filter_kalman(accel_angle_y, gyro_angle_y);
+*/
 }
-
 
 /**
   * @fn     get_angle_x
@@ -186,31 +220,33 @@ float get_angle_z()
   * 
   * @param  None
   */
-void generate_sine_pwm()
+void generate_sine_pwm(float32_t dir_angle, TIM_TypeDef* TIMx)
 {
-  if(dir_controler() == 1){
+
+  if(dir_ctr(dir_angle) == 1){
     phaseU++;
     phaseV++;
     phaseW++;
   }
-  else if(dir_controler() == -1)
+  else if(dir_ctr(dir_angle) == -1)
   {
     phaseU--;
     phaseV--;
     phaseW--;
   }
+
   if(phaseU > SINE_ARRAY_MAX)phaseU = 0;
   if(phaseV > SINE_ARRAY_MAX)phaseV = 0;
   if(phaseW > SINE_ARRAY_MAX)phaseW = 0;
   if(phaseU < 0)phaseU = SINE_ARRAY_MAX;
   if(phaseV < 0)phaseV = SINE_ARRAY_MAX;
   if(phaseW < 0)phaseW = SINE_ARRAY_MAX;
-  duty_PhaseU = CARRIER_TIM_PERIOD*sine_Array[phaseU];
-  duty_PhaseV = CARRIER_TIM_PERIOD*sine_Array[phaseV];
-  duty_PhaseW = CARRIER_TIM_PERIOD*sine_Array[phaseW];
-  TIM_SetCompare2(TIM4,(uint32_t)duty_PhaseU);
-  TIM_SetCompare3(TIM4,(uint32_t)duty_PhaseV);
-  TIM_SetCompare4(TIM4,(uint32_t)duty_PhaseW);
+  duty_PhaseU = (float32_t)CARRIER_TIM_PERIOD*sine_Array[phaseU];
+  duty_PhaseV = (float32_t)CARRIER_TIM_PERIOD*sine_Array[phaseV];
+  duty_PhaseW = (float32_t)CARRIER_TIM_PERIOD*sine_Array[phaseW];
+  TIM_SetCompare2(TIMx,(uint32_t)duty_PhaseU);
+  TIM_SetCompare3(TIMx,(uint32_t)duty_PhaseV);
+  TIM_SetCompare4(TIMx,(uint32_t)duty_PhaseW);
 }
 
 /**********************************END OF FILE**********************************/
