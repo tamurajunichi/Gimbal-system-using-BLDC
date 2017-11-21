@@ -27,7 +27,7 @@ void ctr_init()
   kp_x = 2000.0f;
   ki_x = 0.0f;
   kd_x = 0.0f;
-  kp_y = 0.0f;
+  kp_y = 2000.0f;
   ki_y = 0.0f;
   kd_y = 0.0f;
 
@@ -46,17 +46,16 @@ int dir_ctr(float32_t dir_angle)
 
 int pid_ctr(float32_t pid_angle,float32_t samp_time,TIM_TypeDef* target)
 {
+
+  if(pid_angle < 0)pid_angle = -pid_angle;
+
   if(target == TIM1)
   {
-
-    if(pid_angle < 0)pid_angle = -pid_angle;
     e[0] = (float32_t)TARGET_ANGLE - pid_angle;
-
     ux += kp_x*(e[0] - e[1])+ki_x*e[0]+kd_x*((e[0]-e[1])-(e[1]-e[2]));  
 
     if(ux < 10000.0f)ux = 10000.0f;
     if(ux>65535.0f)ux=65535.0f;
-
 
     e[2] = e[1];
     e[1] = e[0];
@@ -65,8 +64,10 @@ int pid_ctr(float32_t pid_angle,float32_t samp_time,TIM_TypeDef* target)
   if(target == TIM7)
   {
     e[3] = (float32_t)TARGET_ANGLE - pid_angle;
-    uy += (int)(kp_y*e[3]+ ki_y*(e[3] + e[4] + e[5])*samp_time);  
-    if(uy < 0)uy = 0;
+    uy += kp_y*(e[3] - e[4])+ki_y*e[3]+kd_y*((e[3]-e[4])-(e[4]-e[5]));  
+
+    if(uy < 10000.0f)uy = 10000.0f;
+    if(uy>65535.0f)uy=65535.0f;
 
     e[5] = e[4];
     e[4] = e[3];

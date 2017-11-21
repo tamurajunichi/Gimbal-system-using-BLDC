@@ -26,32 +26,32 @@ void data_init()
   phaseU      = 0;
   phaseV      = 120;
   phaseU      = 240;
-  duty_PhaseU = 0;
-  duty_PhaseV = 0;
-  duty_PhaseW = 0;
+  duty_PhaseU = 0.0f;
+  duty_PhaseV = 0.0f;
+  duty_PhaseW = 0.0f;
 
-  pre_accel_x = 0;
-  pre_accel_y = 0;
+  pre_accel_x = 0.0f;
+  pre_accel_y = 0.0f;
 
-  gyro_angle_x = 0;
-  gyro_angle_y = 0;
-  gyro_angle_z = 0;
+  gyro_angle_x = 0.0f;
+  gyro_angle_y = 0.0f;
+  gyro_angle_z = 0.0f;
 
-  pre_angle_x = 0;
-  pre_angle_y = 0;
+  pre_angle_x = 0.0f;
+  pre_angle_y = 0.0f;
 
-  offset_ay = 0;
-  offset_az = 0;
-  offset_gx = 0;
-  offset_gy = 0;
-  offset_gz = 0;
+  offset_ay = 0.0f;
+  offset_az = 0.0f;
+  offset_gx = 0.0f;
+  offset_gy = 0.0f;
+  offset_gz = 0.0f;
 
   flag = 0;
-  dbg_period = 0;
+  dbg_period_x = 0;
+  dbg_period_y = 0;
 
-
-  samp_Time = tim2_get_time();
-  print_Time = tim2_get_time();
+  samp_Time  = tim2_get_time();
+  print_Time = 0.0f;
 
   serial_puts(USART3,"\nTIME\tANGLE_X\tANGLE_Y\tACCEL_X\tACCEL_Y\tACCEL_Z\t");
   serial_puts(USART3,"GYRO_X\tGYRO_Y\tGYRO_Z\n");
@@ -67,16 +67,16 @@ void data_init()
 void data_processing(uint32_t tim2_count)
 {
   if((tim2_count - samp_Time) >= WAITTIME){
-    samp_Time = tim2_count;
+    print_Time += 0.01f;
 
-    proc_mpu6050();
+   proc_mpu6050();
 
-   print_float(USART3,(float32_t)samp_Time/10000.0f,5,3);
+   print_float(USART3,print_Time,5,3);
    serial_puts(USART3,",");
    print_float(USART3,angle_x,3,3);
-  /* serial_puts(USART3,",");
-   print_float(USART3,angle_y,3,3);
    serial_puts(USART3,",");
+   print_float(USART3,angle_y,3,3);
+   /*serial_puts(USART3,",");
    print_float(USART3,angle_z,3,3);
    serial_puts(USART3,",");
    print_float(USART3,accel_x,3,3);
@@ -91,7 +91,9 @@ void data_processing(uint32_t tim2_count)
    serial_puts(USART3,",");
    print_float(USART3,gyro_z,5,3);*/
    serial_puts(USART3,",");
-   print_int32(USART3,dbg_period);
+   print_int32(USART3,dbg_period_x);
+   serial_puts(USART3,",");
+   print_int32(USART3,dbg_period_y);
    serial_puts(USART3,"\n");
  }
 }
@@ -119,7 +121,8 @@ void proc_mpu6050()
   }else{
   proc_accel_angle();
   proc_angle();
-  dbg_period = resetup_sine(TIM1,pid_ctr(angle_y,samp_Time,TIM1));
+  dbg_period_x = resetup_sine(TIM1,pid_ctr(angle_x,samp_Time,TIM1));
+  dbg_period_y = resetup_sine(TIM7,pid_ctr(angle_y,samp_Time,TIM7));
   }
 
 }
@@ -133,12 +136,14 @@ void proc_mpu6050()
 void proc_accel_angle()
 {
   float32_t sqrt;
-
+  
+  /* origin accel_x LPF */
   //accel_x = filter_ema(accel_x,pre_accel_x);
   //pre_accel_x = accel_x;
   arm_sqrt_f32((accel_y*accel_y + accel_z*accel_z),&sqrt);
   accel_angle_x = myAtan(accel_x/sqrt) * 180.0f / PI;
 
+  /* origin accel_y LPF */
   //accel_y = filter_ema(accel_y,pre_accel_y);
   //pre_accel_y = accel_y;
   arm_sqrt_f32((accel_x*accel_x + accel_z*accel_z),&sqrt);
@@ -153,8 +158,8 @@ void proc_accel_angle()
   */
 void proc_gyro_angle()
 {  
-  gyro_angle_x += gyro_x * 0.005f;
-  gyro_angle_y += gyro_y * 0.005f;
+  gyro_angle_x += gyro_x * 0.01f;
+  gyro_angle_y += gyro_y * 0.01f;
 
 }
 
@@ -167,18 +172,25 @@ void proc_gyro_angle()
 void proc_angle()
 {  
   
-    
-  angle_x = 0.97f * (pre_angle_x + gyro_x * (100.0f / 10000.0f)) + 0.03f * accel_angle_x;
+ /* compliment filter */
+  /*
+  angle_x = 0.98f * (pre_angle_x + gyro_x * (100.0f / 10000.0f)) + 0.02f * accel_angle_x;
   angle_y = 0.92f * (pre_angle_y + gyro_y * (100.0f / 10000.0f)) + 0.08f * accel_angle_y;
   angle_z = gyro_z * ( 100.0f / 10000.0f );
 
   pre_angle_x = angle_x;
   pre_angle_y = angle_y;
+  */
+
+  /* kalman filter */
+  angle_x = filter_kalman(accel_angle_x, gyro_angle_x, TIM1);
+  angle_x = filter_ema(angle_x,pre_angle_x);
+  pre_angle_x = angle_x;
   
-/*
-  angle_x = filter_kalman(accel_angle_x, gyro_angle_x);
-  angle_y = filter_kalman(accel_angle_y, gyro_angle_y);
-*/
+  angle_y = filter_kalman(accel_angle_y, gyro_angle_y, TIM7);
+  angle_y = filter_ema(angle_y,pre_angle_y);
+  pre_angle_y = angle_y;
+
 }
 
 /**

@@ -72,8 +72,8 @@ offset_ax           0x4               build/src/gimbal_mpu6050.o
 offset_gx           0x4               build/src/gimbal_mpu6050.o
 kal_deg             0x4               build/src/gimbal_mpu6050.o
 i2c_async_len       0x4               build/src/gimbal_mpu6050.o
+p_11_y              0x4               build/src/gimbal_mpu6050.o
 Q_angle             0x4               build/src/gimbal_mpu6050.o
-p                   0x4               build/src/gimbal_mpu6050.o
 accel_x             0x4               build/src/gimbal_mpu6050.o
 samp_Time           0x4               build/src/gimbal_mpu6050.o
 accel_angle_x       0x4               build/src/gimbal_mpu6050.o
@@ -87,40 +87,49 @@ pre_accel_y         0x4               build/src/gimbal_mpu6050.o
 x_angle             0x4               build/src/gimbal_mpu6050.o
 offset_gz           0x4               build/src/gimbal_mpu6050.o
 flag                0x4               build/src/gimbal_mpu6050.o
+k_0_x               0x4               build/src/gimbal_mpu6050.o
 pre_accel_x         0x4               build/src/gimbal_mpu6050.o
 duty_PhaseW         0x4               build/src/gimbal_mpu6050.o
-k                   0x4               build/src/gimbal_mpu6050.o
 avg_accel_z         0x4               build/src/gimbal_mpu6050.o
 xQueueRegistry      0x40              build/lib/FreeRTOS/queue.o
+y_bias              0x4               build/src/gimbal_mpu6050.o
+y_y                 0x4               build/src/gimbal_mpu6050.o
 temp                0x4               build/src/gimbal_mpu6050.o
 mpu6050_reg_buffer  0xe               build/src/gimbal_mpu6050.o
 angle_z             0x4               build/src/gimbal_mpu6050.o
 gyro_y              0x4               build/src/gimbal_mpu6050.o
 i2c_async_event_handler
                     0x4               build/src/gimbal_mpu6050.o
-S                   0x4               build/src/gimbal_mpu6050.o
 accel_y             0x4               build/src/gimbal_mpu6050.o
 i2c_async_reg       0x1               build/src/gimbal_mpu6050.o
 pre_angle_x         0x4               build/src/gimbal_mpu6050.o
 pre_angle_y         0x4               build/src/gimbal_mpu6050.o
 print_Time          0x4               build/src/gimbal_mpu6050.o
+p_11_x              0x4               build/src/gimbal_mpu6050.o
+y_x                 0x4               build/src/gimbal_mpu6050.o
 gyro_angle_y        0x4               build/src/gimbal_mpu6050.o
+p_00_y              0x4               build/src/gimbal_mpu6050.o
+k_1_y               0x4               build/src/gimbal_mpu6050.o
 R_angle             0x4               build/src/gimbal_mpu6050.o
 kd_y                0x4               build/src/gimbal_mpu6050.o
+dbg_period_y        0x4               build/src/gimbal_mpu6050.o
 i                   0x4               build/src/gimbal_mpu6050.o
 kp_x                0x4               build/src/gimbal_mpu6050.o
 val                 0x2               build/src/gimbal_mpu6050.o
+dbg_period_x        0x4               build/src/gimbal_mpu6050.o
 angle_y             0x4               build/src/gimbal_mpu6050.o
 avg_gyro_x          0x4               build/src/gimbal_mpu6050.o
 dma_event_handler   0x4               build/src/gimbal_mpu6050.o
-dbg_period          0x4               build/src/gimbal_mpu6050.o
 offset_gy           0x4               build/src/gimbal_mpu6050.o
 i2c_async_stage     0x4               build/src/gimbal_mpu6050.o
+p_01_y              0x4               build/src/gimbal_mpu6050.o
 ema_val             0x4               build/src/gimbal_mpu6050.o
 angle_x             0x4               build/src/gimbal_mpu6050.o
+k_0_y               0x4               build/src/gimbal_mpu6050.o
 pre_ema_val         0x4               build/src/gimbal_mpu6050.o
 x_bias              0x4               build/src/gimbal_mpu6050.o
-y                   0x4               build/src/gimbal_mpu6050.o
+S_y                 0x4               build/src/gimbal_mpu6050.o
+p_10_y              0x4               build/src/gimbal_mpu6050.o
 gyro_x              0x4               build/src/gimbal_mpu6050.o
 ux                  0x4               build/src/gimbal_mpu6050.o
 avg_accel_x         0x4               build/src/gimbal_mpu6050.o
@@ -131,21 +140,27 @@ gyro_angle_z        0x4               build/src/gimbal_mpu6050.o
 phaseV              0x4               build/src/gimbal_mpu6050.o
 i2c_async_buf       0x4               build/src/gimbal_mpu6050.o
 TIM2_Count          0x4               build/src/gimbal_mpu6050.o
+S_x                 0x4               build/src/gimbal_mpu6050.o
 avg_accel_y         0x4               build/src/gimbal_mpu6050.o
 kd_x                0x4               build/src/gimbal_mpu6050.o
 dt                  0x4               build/src/gimbal_mpu6050.o
 ki_y                0x4               build/src/gimbal_mpu6050.o
 phaseU              0x4               build/src/gimbal_mpu6050.o
 Q_gyro              0x4               build/src/gimbal_mpu6050.o
+k_1_x               0x4               build/src/gimbal_mpu6050.o
 accel_z             0x4               build/src/gimbal_mpu6050.o
 accel_angle_y       0x4               build/src/gimbal_mpu6050.o
 e                   0x14              build/src/gimbal_mpu6050.o
 phaseW              0x4               build/src/gimbal_mpu6050.o
+p_00_x              0x4               build/src/gimbal_mpu6050.o
 gyro_angle_x        0x4               build/src/gimbal_mpu6050.o
 func_count          0x4               build/src/gimbal_mpu6050.o
 gyro_z              0x4               build/src/gimbal_mpu6050.o
+p_10_x              0x4               build/src/gimbal_mpu6050.o
 offset_az           0x4               build/src/gimbal_mpu6050.o
 duty_PhaseU         0x4               build/src/gimbal_mpu6050.o
+p_01_x              0x4               build/src/gimbal_mpu6050.o
+y_angle             0x4               build/src/gimbal_mpu6050.o
 ki_x                0x4               build/src/gimbal_mpu6050.o
 
 Discarded input sections
@@ -222,11 +237,9 @@ Discarded input sections
  .group         0x0000000000000000        0x8 build/src/gimbal_mpu6050.o
  .group         0x0000000000000000        0x8 build/src/gimbal_mpu6050.o
  .group         0x0000000000000000        0x8 build/src/gimbal_mpu6050.o
- .group         0x0000000000000000        0x8 build/src/gimbal_mpu6050.o
  .text          0x0000000000000000        0x0 build/src/gimbal_mpu6050.o
  .data          0x0000000000000000        0x0 build/src/gimbal_mpu6050.o
  .bss           0x0000000000000000        0x0 build/src/gimbal_mpu6050.o
- .group         0x0000000000000000        0x8 build/src/gimbal_proc.o
  .group         0x0000000000000000        0x8 build/src/gimbal_proc.o
  .group         0x0000000000000000        0x8 build/src/gimbal_proc.o
  .group         0x0000000000000000        0x8 build/src/gimbal_proc.o
@@ -346,7 +359,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x1c build/src/gimbal_proc.o
  .debug_macro   0x0000000000000000       0x52 build/src/gimbal_proc.o
  .debug_macro   0x0000000000000000       0x10 build/src/gimbal_proc.o
- .debug_macro   0x0000000000000000       0x10 build/src/gimbal_proc.o
  .group         0x0000000000000000        0x8 build/src/gimbal_filter.o
  .group         0x0000000000000000        0x8 build/src/gimbal_filter.o
  .group         0x0000000000000000        0x8 build/src/gimbal_filter.o
@@ -406,10 +418,7 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/src/gimbal_filter.o
  .data          0x0000000000000000        0x0 build/src/gimbal_filter.o
  .bss           0x0000000000000000        0x0 build/src/gimbal_filter.o
- .text.filter_ema
-                0x0000000000000000       0x48 build/src/gimbal_filter.o
- .text.filter_kalman
-                0x0000000000000000      0x374 build/src/gimbal_filter.o
+ .rodata.ema_k  0x0000000000000000        0x4 build/src/gimbal_filter.o
  .debug_macro   0x0000000000000000      0x88c build/src/gimbal_filter.o
  .debug_macro   0x0000000000000000       0x12 build/src/gimbal_filter.o
  .debug_macro   0x0000000000000000       0x22 build/src/gimbal_filter.o
@@ -594,7 +603,6 @@ Discarded input sections
  .group         0x0000000000000000        0x8 build/src/gimbal_ctr.o
  .group         0x0000000000000000        0x8 build/src/gimbal_ctr.o
  .group         0x0000000000000000        0x8 build/src/gimbal_ctr.o
- .group         0x0000000000000000        0x8 build/src/gimbal_ctr.o
  .text          0x0000000000000000        0x0 build/src/gimbal_ctr.o
  .data          0x0000000000000000        0x0 build/src/gimbal_ctr.o
  .bss           0x0000000000000000        0x0 build/src/gimbal_ctr.o
@@ -653,8 +661,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 build/src/gimbal_ctr.o
  .debug_macro   0x0000000000000000       0x52 build/src/gimbal_ctr.o
  .debug_macro   0x0000000000000000       0xee build/src/gimbal_ctr.o
- .debug_macro   0x0000000000000000       0x10 build/src/gimbal_ctr.o
- .group         0x0000000000000000        0x8 build/src/my_math.o
  .group         0x0000000000000000        0x8 build/src/my_math.o
  .group         0x0000000000000000        0x8 build/src/my_math.o
  .group         0x0000000000000000        0x8 build/src/my_math.o
@@ -771,8 +777,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x52 build/src/my_math.o
  .debug_macro   0x0000000000000000       0xee build/src/my_math.o
  .debug_macro   0x0000000000000000       0x10 build/src/my_math.o
- .debug_macro   0x0000000000000000       0x10 build/src/my_math.o
- .group         0x0000000000000000        0x8 build/src/gimbal_tim.o
  .group         0x0000000000000000        0x8 build/src/gimbal_tim.o
  .group         0x0000000000000000        0x8 build/src/gimbal_tim.o
  .group         0x0000000000000000        0x8 build/src/gimbal_tim.o
@@ -887,8 +891,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 build/src/gimbal_tim.o
  .debug_macro   0x0000000000000000       0xee build/src/gimbal_tim.o
  .debug_macro   0x0000000000000000       0x10 build/src/gimbal_tim.o
- .debug_macro   0x0000000000000000       0x10 build/src/gimbal_tim.o
- .group         0x0000000000000000        0x8 build/src/main.o
  .group         0x0000000000000000        0x8 build/src/main.o
  .group         0x0000000000000000        0x8 build/src/main.o
  .group         0x0000000000000000        0x8 build/src/main.o
@@ -1003,7 +1005,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 build/src/main.o
  .debug_macro   0x0000000000000000       0x52 build/src/main.o
  .debug_macro   0x0000000000000000       0xee build/src/main.o
- .debug_macro   0x0000000000000000       0x10 build/src/main.o
  .debug_macro   0x0000000000000000       0x10 build/src/main.o
  .group         0x0000000000000000        0x8 build/src/stm32f4xx_it.o
  .text          0x0000000000000000        0x0 build/src/stm32f4xx_it.o
@@ -1149,7 +1150,6 @@ Discarded input sections
  .group         0x0000000000000000        0x8 build/src/usart.o
  .group         0x0000000000000000        0x8 build/src/usart.o
  .group         0x0000000000000000        0x8 build/src/usart.o
- .group         0x0000000000000000        0x8 build/src/usart.o
  .text          0x0000000000000000        0x0 build/src/usart.o
  .data          0x0000000000000000        0x0 build/src/usart.o
  .bss           0x0000000000000000        0x0 build/src/usart.o
@@ -1208,7 +1208,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 build/src/usart.o
  .debug_macro   0x0000000000000000       0x52 build/src/usart.o
  .debug_macro   0x0000000000000000       0xee build/src/usart.o
- .debug_macro   0x0000000000000000       0x10 build/src/usart.o
  .debug_macro   0x0000000000000000       0x10 build/src/usart.o
  .group         0x0000000000000000        0x8 build/lib/CMSIS/DSP_Lib/Source/SupportFunctions/arm_copy_q15.o
  .group         0x0000000000000000        0x8 build/lib/CMSIS/DSP_Lib/Source/SupportFunctions/arm_copy_q15.o
@@ -24335,7 +24334,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000188                . = ALIGN (0x4)
 
-.text           0x0000000008000188     0x6b38
+.text           0x0000000008000188     0x7320
                 0x0000000008000188                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000188       0xa4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
@@ -24410,507 +24409,511 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
  .text.arm_sqrt_f32
                 0x0000000008001764       0x58 build/src/gimbal_proc.o
  .text.data_init
-                0x00000000080017bc      0x15c build/src/gimbal_proc.o
+                0x00000000080017bc      0x168 build/src/gimbal_proc.o
                 0x00000000080017bc                data_init
  .text.data_processing
-                0x0000000008001918       0xdc build/src/gimbal_proc.o
-                0x0000000008001918                data_processing
+                0x0000000008001924      0x144 build/src/gimbal_proc.o
+                0x0000000008001924                data_processing
  .text.proc_mpu6050
-                0x00000000080019f4      0x27c build/src/gimbal_proc.o
-                0x00000000080019f4                proc_mpu6050
+                0x0000000008001a68      0x2cc build/src/gimbal_proc.o
+                0x0000000008001a68                proc_mpu6050
  .text.proc_accel_angle
-                0x0000000008001c70      0x134 build/src/gimbal_proc.o
-                0x0000000008001c70                proc_accel_angle
+                0x0000000008001d34      0x134 build/src/gimbal_proc.o
+                0x0000000008001d34                proc_accel_angle
  .text.proc_angle
-                0x0000000008001da4      0x12c build/src/gimbal_proc.o
-                0x0000000008001da4                proc_angle
+                0x0000000008001e68      0x10c build/src/gimbal_proc.o
+                0x0000000008001e68                proc_angle
  .text.get_angle_x
-                0x0000000008001ed0       0x20 build/src/gimbal_proc.o
-                0x0000000008001ed0                get_angle_x
+                0x0000000008001f74       0x20 build/src/gimbal_proc.o
+                0x0000000008001f74                get_angle_x
  .text.generate_sine_pwm
-                0x0000000008001ef0      0x250 build/src/gimbal_proc.o
-                0x0000000008001ef0                generate_sine_pwm
+                0x0000000008001f94      0x250 build/src/gimbal_proc.o
+                0x0000000008001f94                generate_sine_pwm
  .text.filter_init
-                0x0000000008002140      0x118 build/src/gimbal_filter.o
-                0x0000000008002140                filter_init
+                0x00000000080021e4      0x15c build/src/gimbal_filter.o
+                0x00000000080021e4                filter_init
+ .text.filter_ema
+                0x0000000008002340       0x50 build/src/gimbal_filter.o
+                0x0000000008002340                filter_ema
  .text.del_accel_offset
-                0x0000000008002258       0xd0 build/src/gimbal_filter.o
-                0x0000000008002258                del_accel_offset
+                0x0000000008002390       0xd0 build/src/gimbal_filter.o
+                0x0000000008002390                del_accel_offset
  .text.del_gyro_offset
-                0x0000000008002328      0x104 build/src/gimbal_filter.o
-                0x0000000008002328                del_gyro_offset
- .text._sbrk    0x000000000800242c       0x7c build/src/syscalls.o
-                0x000000000800242c                _sbrk
+                0x0000000008002460      0x100 build/src/gimbal_filter.o
+                0x0000000008002460                del_gyro_offset
+ .text.filter_kalman
+                0x0000000008002560      0x6ec build/src/gimbal_filter.o
+                0x0000000008002560                filter_kalman
+ .text._sbrk    0x0000000008002c4c       0x7c build/src/syscalls.o
+                0x0000000008002c4c                _sbrk
  .text.ctr_init
-                0x00000000080024a8       0xb4 build/src/gimbal_ctr.o
-                0x00000000080024a8                ctr_init
- .text.dir_ctr  0x000000000800255c       0x54 build/src/gimbal_ctr.o
-                0x000000000800255c                dir_ctr
- .text.pid_ctr  0x00000000080025b0      0x2d4 build/src/gimbal_ctr.o
-                0x00000000080025b0                pid_ctr
- .text.myAtan   0x0000000008002884      0x150 build/src/my_math.o
-                0x0000000008002884                myAtan
- .text.mypowf   0x00000000080029d4       0x4c build/src/my_math.o
-                0x00000000080029d4                mypowf
+                0x0000000008002cc8       0xb8 build/src/gimbal_ctr.o
+                0x0000000008002cc8                ctr_init
+ .text.dir_ctr  0x0000000008002d80       0x54 build/src/gimbal_ctr.o
+                0x0000000008002d80                dir_ctr
+ .text.pid_ctr  0x0000000008002dd4      0x348 build/src/gimbal_ctr.o
+                0x0000000008002dd4                pid_ctr
+ .text.myAtan   0x000000000800311c      0x150 build/src/my_math.o
+                0x000000000800311c                myAtan
+ .text.mypowf   0x000000000800326c       0x4c build/src/my_math.o
+                0x000000000800326c                mypowf
  .text.TIM2_IRQHandler
-                0x0000000008002a20       0x38 build/src/gimbal_tim.o
-                0x0000000008002a20                TIM2_IRQHandler
+                0x00000000080032b8       0x38 build/src/gimbal_tim.o
+                0x00000000080032b8                TIM2_IRQHandler
  .text.TIM1_UP_TIM10_IRQHandler
-                0x0000000008002a58       0x3c build/src/gimbal_tim.o
-                0x0000000008002a58                TIM1_UP_TIM10_IRQHandler
+                0x00000000080032f0       0x3c build/src/gimbal_tim.o
+                0x00000000080032f0                TIM1_UP_TIM10_IRQHandler
  .text.TIM7_IRQHandler
-                0x0000000008002a94       0x28 build/src/gimbal_tim.o
-                0x0000000008002a94                TIM7_IRQHandler
- .text.TIM8_UP_TIM13_IRQHandler
-                0x0000000008002abc       0x28 build/src/gimbal_tim.o
-                0x0000000008002abc                TIM8_UP_TIM13_IRQHandler
+                0x000000000800332c       0x28 build/src/gimbal_tim.o
+                0x000000000800332c                TIM7_IRQHandler
  .text.tim_init
-                0x0000000008002ae4       0x64 build/src/gimbal_tim.o
-                0x0000000008002ae4                tim_init
+                0x0000000008003354       0x4c build/src/gimbal_tim.o
+                0x0000000008003354                tim_init
  .text.setup_carrier
-                0x0000000008002b48       0x94 build/src/gimbal_tim.o
-                0x0000000008002b48                setup_carrier
+                0x00000000080033a0       0x94 build/src/gimbal_tim.o
+                0x00000000080033a0                setup_carrier
  .text.setup_sine
-                0x0000000008002bdc       0x4c build/src/gimbal_tim.o
-                0x0000000008002bdc                setup_sine
+                0x0000000008003434       0x4c build/src/gimbal_tim.o
+                0x0000000008003434                setup_sine
  .text.setup_timer
-                0x0000000008002c28       0x4c build/src/gimbal_tim.o
-                0x0000000008002c28                setup_timer
+                0x0000000008003480       0x4c build/src/gimbal_tim.o
+                0x0000000008003480                setup_timer
  .text.setup_tim_gpio
-                0x0000000008002c74      0x12c build/src/gimbal_tim.o
-                0x0000000008002c74                setup_tim_gpio
+                0x00000000080034cc       0xd4 build/src/gimbal_tim.o
+                0x00000000080034cc                setup_tim_gpio
  .text.setup_tim_nvic
-                0x0000000008002da0       0x6c build/src/gimbal_tim.o
-                0x0000000008002da0                setup_tim_nvic
+                0x00000000080035a0       0x54 build/src/gimbal_tim.o
+                0x00000000080035a0                setup_tim_nvic
  .text.setup_tim_rcc
-                0x0000000008002e0c       0x20 build/src/gimbal_tim.o
-                0x0000000008002e0c                setup_tim_rcc
+                0x00000000080035f4       0x20 build/src/gimbal_tim.o
+                0x00000000080035f4                setup_tim_rcc
  .text.tim2_get_time
-                0x0000000008002e2c       0x18 build/src/gimbal_tim.o
-                0x0000000008002e2c                tim2_get_time
+                0x0000000008003614       0x18 build/src/gimbal_tim.o
+                0x0000000008003614                tim2_get_time
  .text.resetup_sine
-                0x0000000008002e44       0x48 build/src/gimbal_tim.o
-                0x0000000008002e44                resetup_sine
- .text.main     0x0000000008002e8c       0x7c build/src/main.o
-                0x0000000008002e8c                main
+                0x000000000800362c       0x48 build/src/gimbal_tim.o
+                0x000000000800362c                resetup_sine
+ .text.main     0x0000000008003674       0x7c build/src/main.o
+                0x0000000008003674                main
  .text.NMI_Handler
-                0x0000000008002f08        0xc build/src/stm32f4xx_it.o
-                0x0000000008002f08                NMI_Handler
+                0x00000000080036f0        0xc build/src/stm32f4xx_it.o
+                0x00000000080036f0                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008002f14        0x8 build/src/stm32f4xx_it.o
-                0x0000000008002f14                HardFault_Handler
+                0x00000000080036fc        0x8 build/src/stm32f4xx_it.o
+                0x00000000080036fc                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000008002f1c        0x8 build/src/stm32f4xx_it.o
-                0x0000000008002f1c                MemManage_Handler
+                0x0000000008003704        0x8 build/src/stm32f4xx_it.o
+                0x0000000008003704                MemManage_Handler
  .text.BusFault_Handler
-                0x0000000008002f24        0x8 build/src/stm32f4xx_it.o
-                0x0000000008002f24                BusFault_Handler
+                0x000000000800370c        0x8 build/src/stm32f4xx_it.o
+                0x000000000800370c                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000008002f2c        0x8 build/src/stm32f4xx_it.o
-                0x0000000008002f2c                UsageFault_Handler
+                0x0000000008003714        0x8 build/src/stm32f4xx_it.o
+                0x0000000008003714                UsageFault_Handler
  .text.DebugMon_Handler
-                0x0000000008002f34        0xc build/src/stm32f4xx_it.o
-                0x0000000008002f34                DebugMon_Handler
+                0x000000000800371c        0xc build/src/stm32f4xx_it.o
+                0x000000000800371c                DebugMon_Handler
  .text.SystemInit
-                0x0000000008002f40       0xac build/src/system_stm32f4xx.o
-                0x0000000008002f40                SystemInit
+                0x0000000008003728       0xac build/src/system_stm32f4xx.o
+                0x0000000008003728                SystemInit
  .text.SetSysClock
-                0x0000000008002fec      0x17c build/src/system_stm32f4xx.o
+                0x00000000080037d4      0x17c build/src/system_stm32f4xx.o
  .text.setup_serial
-                0x0000000008003168       0x90 build/src/usart.o
-                0x0000000008003168                setup_serial
+                0x0000000008003950       0x90 build/src/usart.o
+                0x0000000008003950                setup_serial
  .text.serial_putchar
-                0x00000000080031f8       0x2c build/src/usart.o
-                0x00000000080031f8                serial_putchar
+                0x00000000080039e0       0x2c build/src/usart.o
+                0x00000000080039e0                serial_putchar
  .text.serial_puts
-                0x0000000008003224       0x2c build/src/usart.o
-                0x0000000008003224                serial_puts
+                0x0000000008003a0c       0x2c build/src/usart.o
+                0x0000000008003a0c                serial_puts
  .text.serial_output_hexdig
-                0x0000000008003250       0x28 build/src/usart.o
-                0x0000000008003250                serial_output_hexdig
+                0x0000000008003a38       0x28 build/src/usart.o
+                0x0000000008003a38                serial_output_hexdig
  .text.serial_output_hexbyte
-                0x0000000008003278       0x30 build/src/usart.o
-                0x0000000008003278                serial_output_hexbyte
+                0x0000000008003a60       0x30 build/src/usart.o
+                0x0000000008003a60                serial_output_hexbyte
  .text.print_uint32
-                0x00000000080032a8       0x98 build/src/usart.o
-                0x00000000080032a8                print_uint32
+                0x0000000008003a90       0x98 build/src/usart.o
+                0x0000000008003a90                print_uint32
  .text.print_int32
-                0x0000000008003340       0x38 build/src/usart.o
-                0x0000000008003340                print_int32
+                0x0000000008003b28       0x38 build/src/usart.o
+                0x0000000008003b28                print_int32
  .text.float_to_str
-                0x0000000008003378      0x198 build/src/usart.o
-                0x0000000008003378                float_to_str
+                0x0000000008003b60      0x198 build/src/usart.o
+                0x0000000008003b60                float_to_str
  .text.print_float
-                0x0000000008003510       0x4c build/src/usart.o
-                0x0000000008003510                print_float
+                0x0000000008003cf8       0x4c build/src/usart.o
+                0x0000000008003cf8                print_float
  .text.vListInsertEnd
-                0x000000000800355c       0x48 build/lib/FreeRTOS/list.o
-                0x000000000800355c                vListInsertEnd
+                0x0000000008003d44       0x48 build/lib/FreeRTOS/list.o
+                0x0000000008003d44                vListInsertEnd
  .text.uxListRemove
-                0x00000000080035a4       0x54 build/lib/FreeRTOS/list.o
-                0x00000000080035a4                uxListRemove
+                0x0000000008003d8c       0x54 build/lib/FreeRTOS/list.o
+                0x0000000008003d8c                uxListRemove
  .text.xTaskIncrementTick
-                0x00000000080035f8      0x1e8 build/lib/FreeRTOS/tasks.o
-                0x00000000080035f8                xTaskIncrementTick
+                0x0000000008003de0      0x1e8 build/lib/FreeRTOS/tasks.o
+                0x0000000008003de0                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x00000000080037e0       0xc8 build/lib/FreeRTOS/tasks.o
-                0x00000000080037e0                vTaskSwitchContext
+                0x0000000008003fc8       0xc8 build/lib/FreeRTOS/tasks.o
+                0x0000000008003fc8                vTaskSwitchContext
  .text.prvResetNextTaskUnblockTime
-                0x00000000080038a8       0x58 build/lib/FreeRTOS/tasks.o
+                0x0000000008004090       0x58 build/lib/FreeRTOS/tasks.o
  .text.SVC_Handler
-                0x0000000008003900       0x20 build/lib/FreeRTOS/portable/port.o
-                0x0000000008003900                SVC_Handler
+                0x00000000080040e8       0x20 build/lib/FreeRTOS/portable/port.o
+                0x00000000080040e8                SVC_Handler
  .text.PendSV_Handler
-                0x0000000008003920       0x60 build/lib/FreeRTOS/portable/port.o
-                0x0000000008003920                PendSV_Handler
+                0x0000000008004108       0x60 build/lib/FreeRTOS/portable/port.o
+                0x0000000008004108                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008003980       0x48 build/lib/FreeRTOS/portable/port.o
-                0x0000000008003980                SysTick_Handler
+                0x0000000008004168       0x48 build/lib/FreeRTOS/portable/port.o
+                0x0000000008004168                SysTick_Handler
  .text.GPIO_Init
-                0x00000000080039c8      0x11c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
-                0x00000000080039c8                GPIO_Init
+                0x00000000080041b0      0x11c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+                0x00000000080041b0                GPIO_Init
  .text.GPIO_PinAFConfig
-                0x0000000008003ae4       0x90 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
-                0x0000000008003ae4                GPIO_PinAFConfig
+                0x00000000080042cc       0x90 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+                0x00000000080042cc                GPIO_PinAFConfig
  .text.DMA_DeInit
-                0x0000000008003b74      0x22c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
-                0x0000000008003b74                DMA_DeInit
+                0x000000000800435c      0x22c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x000000000800435c                DMA_DeInit
  .text.DMA_Init
-                0x0000000008003da0       0xb0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
-                0x0000000008003da0                DMA_Init
- .text.DMA_Cmd  0x0000000008003e50       0x38 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
-                0x0000000008003e50                DMA_Cmd
+                0x0000000008004588       0xb0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x0000000008004588                DMA_Init
+ .text.DMA_Cmd  0x0000000008004638       0x38 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x0000000008004638                DMA_Cmd
  .text.DMA_ClearFlag
-                0x0000000008003e88       0x60 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
-                0x0000000008003e88                DMA_ClearFlag
+                0x0000000008004670       0x60 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x0000000008004670                DMA_ClearFlag
  .text.DMA_ITConfig
-                0x0000000008003ee8       0x74 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
-                0x0000000008003ee8                DMA_ITConfig
+                0x00000000080046d0       0x74 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x00000000080046d0                DMA_ITConfig
  .text.DMA_GetITStatus
-                0x0000000008003f5c       0xb4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
-                0x0000000008003f5c                DMA_GetITStatus
+                0x0000000008004744       0xb4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x0000000008004744                DMA_GetITStatus
  .text.DMA_ClearITPendingBit
-                0x0000000008004010       0x60 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
-                0x0000000008004010                DMA_ClearITPendingBit
+                0x00000000080047f8       0x60 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x00000000080047f8                DMA_ClearITPendingBit
  .text.I2C_Init
-                0x0000000008004070      0x18c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x0000000008004070                I2C_Init
- .text.I2C_Cmd  0x00000000080041fc       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x00000000080041fc                I2C_Cmd
+                0x0000000008004858      0x18c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004858                I2C_Init
+ .text.I2C_Cmd  0x00000000080049e4       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x00000000080049e4                I2C_Cmd
  .text.I2C_GenerateSTART
-                0x000000000800423c       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x000000000800423c                I2C_GenerateSTART
+                0x0000000008004a24       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004a24                I2C_GenerateSTART
  .text.I2C_GenerateSTOP
-                0x000000000800427c       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x000000000800427c                I2C_GenerateSTOP
+                0x0000000008004a64       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004a64                I2C_GenerateSTOP
  .text.I2C_Send7bitAddress
-                0x00000000080042bc       0x3c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x00000000080042bc                I2C_Send7bitAddress
+                0x0000000008004aa4       0x3c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004aa4                I2C_Send7bitAddress
  .text.I2C_AcknowledgeConfig
-                0x00000000080042f8       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x00000000080042f8                I2C_AcknowledgeConfig
+                0x0000000008004ae0       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004ae0                I2C_AcknowledgeConfig
  .text.I2C_SendData
-                0x0000000008004338       0x20 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x0000000008004338                I2C_SendData
+                0x0000000008004b20       0x20 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004b20                I2C_SendData
  .text.I2C_ReceiveData
-                0x0000000008004358       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x0000000008004358                I2C_ReceiveData
+                0x0000000008004b40       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004b40                I2C_ReceiveData
  .text.I2C_DMACmd
-                0x0000000008004374       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x0000000008004374                I2C_DMACmd
+                0x0000000008004b5c       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004b5c                I2C_DMACmd
  .text.I2C_DMALastTransferCmd
-                0x00000000080043b4       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x00000000080043b4                I2C_DMALastTransferCmd
+                0x0000000008004b9c       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004b9c                I2C_DMALastTransferCmd
  .text.I2C_ITConfig
-                0x00000000080043f4       0x48 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x00000000080043f4                I2C_ITConfig
+                0x0000000008004bdc       0x48 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004bdc                I2C_ITConfig
  .text.I2C_CheckEvent
-                0x000000000800443c       0x60 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x000000000800443c                I2C_CheckEvent
+                0x0000000008004c24       0x60 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004c24                I2C_CheckEvent
  .text.I2C_GetLastEvent
-                0x000000000800449c       0x44 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
-                0x000000000800449c                I2C_GetLastEvent
+                0x0000000008004c84       0x44 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000008004c84                I2C_GetLastEvent
  .text.RCC_GetClocksFreq
-                0x00000000080044e0      0x1a8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
-                0x00000000080044e0                RCC_GetClocksFreq
+                0x0000000008004cc8      0x1a8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+                0x0000000008004cc8                RCC_GetClocksFreq
  .text.RCC_AHB1PeriphClockCmd
-                0x0000000008004688       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
-                0x0000000008004688                RCC_AHB1PeriphClockCmd
+                0x0000000008004e70       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+                0x0000000008004e70                RCC_AHB1PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x00000000080046d8       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
-                0x00000000080046d8                RCC_APB1PeriphClockCmd
+                0x0000000008004ec0       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+                0x0000000008004ec0                RCC_APB1PeriphClockCmd
  .text.RCC_APB2PeriphClockCmd
-                0x0000000008004728       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
-                0x0000000008004728                RCC_APB2PeriphClockCmd
+                0x0000000008004f10       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+                0x0000000008004f10                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphResetCmd
-                0x0000000008004778       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
-                0x0000000008004778                RCC_APB1PeriphResetCmd
+                0x0000000008004f60       0x50 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+                0x0000000008004f60                RCC_APB1PeriphResetCmd
  .text.NVIC_PriorityGroupConfig
-                0x00000000080047c8       0x28 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
-                0x00000000080047c8                NVIC_PriorityGroupConfig
+                0x0000000008004fb0       0x28 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+                0x0000000008004fb0                NVIC_PriorityGroupConfig
  .text.NVIC_Init
-                0x00000000080047f0       0xd0 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
-                0x00000000080047f0                NVIC_Init
+                0x0000000008004fd8       0xd0 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+                0x0000000008004fd8                NVIC_Init
  .text.USART_Init
-                0x00000000080048c0      0x18c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
-                0x00000000080048c0                USART_Init
+                0x00000000080050a8      0x18c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+                0x00000000080050a8                USART_Init
  .text.USART_Cmd
-                0x0000000008004a4c       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
-                0x0000000008004a4c                USART_Cmd
+                0x0000000008005234       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+                0x0000000008005234                USART_Cmd
  .text.USART_SendData
-                0x0000000008004a8c       0x24 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
-                0x0000000008004a8c                USART_SendData
+                0x0000000008005274       0x24 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+                0x0000000008005274                USART_SendData
  .text.TIM_TimeBaseInit
-                0x0000000008004ab0       0xec build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004ab0                TIM_TimeBaseInit
- .text.TIM_Cmd  0x0000000008004b9c       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004b9c                TIM_Cmd
+                0x0000000008005298       0xec build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x0000000008005298                TIM_TimeBaseInit
+ .text.TIM_Cmd  0x0000000008005384       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x0000000008005384                TIM_Cmd
  .text.TIM_OC2Init
-                0x0000000008004bdc      0x110 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004bdc                TIM_OC2Init
+                0x00000000080053c4      0x110 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080053c4                TIM_OC2Init
  .text.TIM_OC3Init
-                0x0000000008004cec      0x10c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004cec                TIM_OC3Init
+                0x00000000080054d4      0x10c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080054d4                TIM_OC3Init
  .text.TIM_OC4Init
-                0x0000000008004df8       0xd0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004df8                TIM_OC4Init
+                0x00000000080055e0       0xd0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080055e0                TIM_OC4Init
  .text.TIM_SetCompare2
-                0x0000000008004ec8       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004ec8                TIM_SetCompare2
+                0x00000000080056b0       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080056b0                TIM_SetCompare2
  .text.TIM_SetCompare3
-                0x0000000008004ee4       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004ee4                TIM_SetCompare3
+                0x00000000080056cc       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080056cc                TIM_SetCompare3
  .text.TIM_SetCompare4
-                0x0000000008004f00       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004f00                TIM_SetCompare4
+                0x00000000080056e8       0x1c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080056e8                TIM_SetCompare4
  .text.TIM_OC2PreloadConfig
-                0x0000000008004f1c       0x3c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004f1c                TIM_OC2PreloadConfig
+                0x0000000008005704       0x3c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x0000000008005704                TIM_OC2PreloadConfig
  .text.TIM_OC3PreloadConfig
-                0x0000000008004f58       0x38 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004f58                TIM_OC3PreloadConfig
+                0x0000000008005740       0x38 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x0000000008005740                TIM_OC3PreloadConfig
  .text.TIM_OC4PreloadConfig
-                0x0000000008004f90       0x3c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004f90                TIM_OC4PreloadConfig
+                0x0000000008005778       0x3c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x0000000008005778                TIM_OC4PreloadConfig
  .text.TIM_ITConfig
-                0x0000000008004fcc       0x48 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008004fcc                TIM_ITConfig
+                0x00000000080057b4       0x48 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080057b4                TIM_ITConfig
  .text.TIM_GetITStatus
-                0x0000000008005014       0x54 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008005014                TIM_GetITStatus
+                0x00000000080057fc       0x54 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x00000000080057fc                TIM_GetITStatus
  .text.TIM_ClearITPendingBit
-                0x0000000008005068       0x20 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
-                0x0000000008005068                TIM_ClearITPendingBit
+                0x0000000008005850       0x20 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x0000000008005850                TIM_ClearITPendingBit
  .text.Reset_Handler
-                0x0000000008005088       0x50 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
-                0x0000000008005088                Reset_Handler
+                0x0000000008005870       0x50 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
+                0x0000000008005870                Reset_Handler
  .text.Default_Handler
-                0x00000000080050d8        0x2 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
-                0x00000000080050d8                RTC_Alarm_IRQHandler
-                0x00000000080050d8                HASH_RNG_IRQHandler
-                0x00000000080050d8                EXTI2_IRQHandler
-                0x00000000080050d8                TIM8_CC_IRQHandler
-                0x00000000080050d8                TIM1_CC_IRQHandler
-                0x00000000080050d8                DMA2_Stream5_IRQHandler
-                0x00000000080050d8                DMA1_Stream5_IRQHandler
-                0x00000000080050d8                PVD_IRQHandler
-                0x00000000080050d8                SDIO_IRQHandler
-                0x00000000080050d8                TAMP_STAMP_IRQHandler
-                0x00000000080050d8                CAN2_RX1_IRQHandler
-                0x00000000080050d8                EXTI3_IRQHandler
-                0x00000000080050d8                TIM8_TRG_COM_TIM14_IRQHandler
-                0x00000000080050d8                I2C3_ER_IRQHandler
-                0x00000000080050d8                EXTI0_IRQHandler
-                0x00000000080050d8                I2C2_EV_IRQHandler
-                0x00000000080050d8                DMA1_Stream2_IRQHandler
-                0x00000000080050d8                CAN1_RX0_IRQHandler
-                0x00000000080050d8                FPU_IRQHandler
-                0x00000000080050d8                OTG_HS_WKUP_IRQHandler
-                0x00000000080050d8                CAN2_SCE_IRQHandler
-                0x00000000080050d8                DMA2_Stream2_IRQHandler
-                0x00000000080050d8                SPI1_IRQHandler
-                0x00000000080050d8                TIM6_DAC_IRQHandler
-                0x00000000080050d8                TIM1_BRK_TIM9_IRQHandler
-                0x00000000080050d8                DCMI_IRQHandler
-                0x00000000080050d8                CAN2_RX0_IRQHandler
-                0x00000000080050d8                DMA2_Stream3_IRQHandler
-                0x00000000080050d8                USART6_IRQHandler
-                0x00000000080050d8                USART3_IRQHandler
-                0x00000000080050d8                CAN1_RX1_IRQHandler
-                0x00000000080050d8                UART5_IRQHandler
-                0x00000000080050d8                DMA2_Stream0_IRQHandler
-                0x00000000080050d8                TIM4_IRQHandler
-                0x00000000080050d8                DMA1_Stream6_IRQHandler
-                0x00000000080050d8                DMA1_Stream1_IRQHandler
-                0x00000000080050d8                UART4_IRQHandler
-                0x00000000080050d8                TIM3_IRQHandler
-                0x00000000080050d8                RCC_IRQHandler
-                0x00000000080050d8                TIM8_BRK_TIM12_IRQHandler
-                0x00000000080050d8                Default_Handler
-                0x00000000080050d8                EXTI15_10_IRQHandler
-                0x00000000080050d8                ADC_IRQHandler
-                0x00000000080050d8                DMA1_Stream7_IRQHandler
-                0x00000000080050d8                CAN2_TX_IRQHandler
-                0x00000000080050d8                TIM5_IRQHandler
-                0x00000000080050d8                DMA2_Stream7_IRQHandler
-                0x00000000080050d8                I2C3_EV_IRQHandler
-                0x00000000080050d8                EXTI9_5_IRQHandler
-                0x00000000080050d8                RTC_WKUP_IRQHandler
-                0x00000000080050d8                ETH_WKUP_IRQHandler
-                0x00000000080050d8                SPI2_IRQHandler
-                0x00000000080050d8                OTG_HS_EP1_IN_IRQHandler
-                0x00000000080050d8                CAN1_TX_IRQHandler
-                0x00000000080050d8                EXTI4_IRQHandler
-                0x00000000080050d8                FSMC_IRQHandler
-                0x00000000080050d8                ETH_IRQHandler
-                0x00000000080050d8                OTG_HS_EP1_OUT_IRQHandler
-                0x00000000080050d8                WWDG_IRQHandler
-                0x00000000080050d8                OTG_FS_WKUP_IRQHandler
-                0x00000000080050d8                TIM1_TRG_COM_TIM11_IRQHandler
-                0x00000000080050d8                OTG_HS_IRQHandler
-                0x00000000080050d8                EXTI1_IRQHandler
-                0x00000000080050d8                USART2_IRQHandler
-                0x00000000080050d8                I2C2_ER_IRQHandler
-                0x00000000080050d8                DMA2_Stream1_IRQHandler
-                0x00000000080050d8                CAN1_SCE_IRQHandler
-                0x00000000080050d8                FLASH_IRQHandler
-                0x00000000080050d8                DMA2_Stream4_IRQHandler
-                0x00000000080050d8                USART1_IRQHandler
-                0x00000000080050d8                OTG_FS_IRQHandler
-                0x00000000080050d8                SPI3_IRQHandler
-                0x00000000080050d8                DMA1_Stream4_IRQHandler
-                0x00000000080050d8                DMA2_Stream6_IRQHandler
-                0x00000000080050d8                DMA1_Stream3_IRQHandler
- *fill*         0x00000000080050da        0x2 
- .text.sqrtf    0x00000000080050dc       0xb8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
-                0x00000000080050dc                sqrtf
+                0x00000000080058c0        0x2 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
+                0x00000000080058c0                RTC_Alarm_IRQHandler
+                0x00000000080058c0                HASH_RNG_IRQHandler
+                0x00000000080058c0                EXTI2_IRQHandler
+                0x00000000080058c0                TIM8_CC_IRQHandler
+                0x00000000080058c0                TIM1_CC_IRQHandler
+                0x00000000080058c0                DMA2_Stream5_IRQHandler
+                0x00000000080058c0                DMA1_Stream5_IRQHandler
+                0x00000000080058c0                PVD_IRQHandler
+                0x00000000080058c0                SDIO_IRQHandler
+                0x00000000080058c0                TAMP_STAMP_IRQHandler
+                0x00000000080058c0                CAN2_RX1_IRQHandler
+                0x00000000080058c0                EXTI3_IRQHandler
+                0x00000000080058c0                TIM8_TRG_COM_TIM14_IRQHandler
+                0x00000000080058c0                TIM8_UP_TIM13_IRQHandler
+                0x00000000080058c0                I2C3_ER_IRQHandler
+                0x00000000080058c0                EXTI0_IRQHandler
+                0x00000000080058c0                I2C2_EV_IRQHandler
+                0x00000000080058c0                DMA1_Stream2_IRQHandler
+                0x00000000080058c0                CAN1_RX0_IRQHandler
+                0x00000000080058c0                FPU_IRQHandler
+                0x00000000080058c0                OTG_HS_WKUP_IRQHandler
+                0x00000000080058c0                CAN2_SCE_IRQHandler
+                0x00000000080058c0                DMA2_Stream2_IRQHandler
+                0x00000000080058c0                SPI1_IRQHandler
+                0x00000000080058c0                TIM6_DAC_IRQHandler
+                0x00000000080058c0                TIM1_BRK_TIM9_IRQHandler
+                0x00000000080058c0                DCMI_IRQHandler
+                0x00000000080058c0                CAN2_RX0_IRQHandler
+                0x00000000080058c0                DMA2_Stream3_IRQHandler
+                0x00000000080058c0                USART6_IRQHandler
+                0x00000000080058c0                USART3_IRQHandler
+                0x00000000080058c0                CAN1_RX1_IRQHandler
+                0x00000000080058c0                UART5_IRQHandler
+                0x00000000080058c0                DMA2_Stream0_IRQHandler
+                0x00000000080058c0                TIM4_IRQHandler
+                0x00000000080058c0                DMA1_Stream6_IRQHandler
+                0x00000000080058c0                DMA1_Stream1_IRQHandler
+                0x00000000080058c0                UART4_IRQHandler
+                0x00000000080058c0                TIM3_IRQHandler
+                0x00000000080058c0                RCC_IRQHandler
+                0x00000000080058c0                TIM8_BRK_TIM12_IRQHandler
+                0x00000000080058c0                Default_Handler
+                0x00000000080058c0                EXTI15_10_IRQHandler
+                0x00000000080058c0                ADC_IRQHandler
+                0x00000000080058c0                DMA1_Stream7_IRQHandler
+                0x00000000080058c0                CAN2_TX_IRQHandler
+                0x00000000080058c0                TIM5_IRQHandler
+                0x00000000080058c0                DMA2_Stream7_IRQHandler
+                0x00000000080058c0                I2C3_EV_IRQHandler
+                0x00000000080058c0                EXTI9_5_IRQHandler
+                0x00000000080058c0                RTC_WKUP_IRQHandler
+                0x00000000080058c0                ETH_WKUP_IRQHandler
+                0x00000000080058c0                SPI2_IRQHandler
+                0x00000000080058c0                OTG_HS_EP1_IN_IRQHandler
+                0x00000000080058c0                CAN1_TX_IRQHandler
+                0x00000000080058c0                EXTI4_IRQHandler
+                0x00000000080058c0                FSMC_IRQHandler
+                0x00000000080058c0                ETH_IRQHandler
+                0x00000000080058c0                OTG_HS_EP1_OUT_IRQHandler
+                0x00000000080058c0                WWDG_IRQHandler
+                0x00000000080058c0                OTG_FS_WKUP_IRQHandler
+                0x00000000080058c0                TIM1_TRG_COM_TIM11_IRQHandler
+                0x00000000080058c0                OTG_HS_IRQHandler
+                0x00000000080058c0                EXTI1_IRQHandler
+                0x00000000080058c0                USART2_IRQHandler
+                0x00000000080058c0                I2C2_ER_IRQHandler
+                0x00000000080058c0                DMA2_Stream1_IRQHandler
+                0x00000000080058c0                CAN1_SCE_IRQHandler
+                0x00000000080058c0                FLASH_IRQHandler
+                0x00000000080058c0                DMA2_Stream4_IRQHandler
+                0x00000000080058c0                USART1_IRQHandler
+                0x00000000080058c0                OTG_FS_IRQHandler
+                0x00000000080058c0                SPI3_IRQHandler
+                0x00000000080058c0                DMA1_Stream4_IRQHandler
+                0x00000000080058c0                DMA2_Stream6_IRQHandler
+                0x00000000080058c0                DMA1_Stream3_IRQHandler
+ *fill*         0x00000000080058c2        0x2 
+ .text.sqrtf    0x00000000080058c4       0xb8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+                0x00000000080058c4                sqrtf
  .text.__ieee754_sqrtf
-                0x0000000008005194       0xa4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
-                0x0000000008005194                __ieee754_sqrtf
- .text.matherr  0x0000000008005238        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
-                0x0000000008005238                matherr
+                0x000000000800597c       0xa4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+                0x000000000800597c                __ieee754_sqrtf
+ .text.matherr  0x0000000008005a20        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+                0x0000000008005a20                matherr
  .text.__fpclassifyf
-                0x000000000800523c       0x38 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
-                0x000000000800523c                __fpclassifyf
- .text.atexit   0x0000000008005274        0xc /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
-                0x0000000008005274                atexit
+                0x0000000008005a24       0x38 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+                0x0000000008005a24                __fpclassifyf
+ .text.atexit   0x0000000008005a5c        0xc /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+                0x0000000008005a5c                atexit
  .text.__libc_fini_array
-                0x0000000008005280       0x2c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
-                0x0000000008005280                __libc_fini_array
+                0x0000000008005a68       0x2c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+                0x0000000008005a68                __libc_fini_array
  .text.__libc_init_array
-                0x00000000080052ac       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
-                0x00000000080052ac                __libc_init_array
- .text.malloc   0x00000000080052fc       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
-                0x00000000080052fc                malloc
+                0x0000000008005a94       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+                0x0000000008005a94                __libc_init_array
+ .text.malloc   0x0000000008005ae4       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+                0x0000000008005ae4                malloc
  .text._malloc_r
-                0x000000000800530c      0x524 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
-                0x000000000800530c                _malloc_r
+                0x0000000008005af4      0x524 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+                0x0000000008005af4                _malloc_r
  .text.__malloc_lock
-                0x0000000008005830        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
-                0x0000000008005830                __malloc_lock
+                0x0000000008006018        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+                0x0000000008006018                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008005834        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
-                0x0000000008005834                __malloc_unlock
- .text._sbrk_r  0x0000000008005838       0x24 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
-                0x0000000008005838                _sbrk_r
+                0x000000000800601c        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+                0x000000000800601c                __malloc_unlock
+ .text._sbrk_r  0x0000000008006020       0x24 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+                0x0000000008006020                _sbrk_r
  .text.__register_exitproc
-                0x000000000800585c       0xa4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
-                0x000000000800585c                __register_exitproc
+                0x0000000008006044       0xa4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+                0x0000000008006044                __register_exitproc
  .text.startup.register_fini
-                0x0000000008005900       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+                0x00000000080060e8       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
  .text._malloc_trim_r
-                0x0000000008005914       0x9c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
-                0x0000000008005914                _malloc_trim_r
- .text._free_r  0x00000000080059b0      0x1b0 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
-                0x00000000080059b0                _free_r
+                0x00000000080060fc       0x9c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+                0x00000000080060fc                _malloc_trim_r
+ .text._free_r  0x0000000008006198      0x1b0 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+                0x0000000008006198                _free_r
  *(.rodata)
- .rodata        0x0000000008005b60       0x9d build/src/gimbal_mpu6050.o
- *fill*         0x0000000008005bfd        0x3 
- .rodata        0x0000000008005c00       0x4e build/src/gimbal_proc.o
+ .rodata        0x0000000008006348       0x9d build/src/gimbal_mpu6050.o
+ *fill*         0x00000000080063e5        0x3 
+ .rodata        0x00000000080063e8       0x4e build/src/gimbal_proc.o
  *(.rodata*)
- *fill*         0x0000000008005c4e        0x2 
+ *fill*         0x0000000008006436        0x2 
  .rodata.sine_Array
-                0x0000000008005c50      0x5a0 build/src/gimbal_proc.o
-                0x0000000008005c50                sine_Array
+                0x0000000008006438      0x5a0 build/src/gimbal_proc.o
+                0x0000000008006438                sine_Array
  .rodata.atan_table
-                0x00000000080061f0      0x9c4 build/src/my_math.o
-                0x00000000080061f0                atan_table
+                0x00000000080069d8      0x9c4 build/src/my_math.o
+                0x00000000080069d8                atan_table
  .rodata.atan_table_width
-                0x0000000008006bb4       0x68 build/src/my_math.o
-                0x0000000008006bb4                atan_table_width
+                0x000000000800739c       0x68 build/src/my_math.o
+                0x000000000800739c                atan_table_width
  .rodata.atan_table_delimit_val
-                0x0000000008006c1c       0x6c build/src/my_math.o
-                0x0000000008006c1c                atan_table_delimit_val
+                0x0000000008007404       0x6c build/src/my_math.o
+                0x0000000008007404                atan_table_delimit_val
  .rodata.str1.4
-                0x0000000008006c88        0x6 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+                0x0000000008007470        0x6 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
                                           0x8 (size before relaxing)
- *fill*         0x0000000008006c8e        0x2 
+ *fill*         0x0000000008007476        0x2 
  .rodata.str1.4
-                0x0000000008006c90        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
+                0x0000000008007478        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
  .rodata._global_impure_ptr
-                0x0000000008006c94        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
-                0x0000000008006c94                _global_impure_ptr
+                0x000000000800747c        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
+                0x000000000800747c                _global_impure_ptr
  *(.glue_7)
- .glue_7        0x0000000008006c98        0x0 linker stubs
+ .glue_7        0x0000000008007480        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008006c98        0x0 linker stubs
+ .glue_7t       0x0000000008007480        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008006c98        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x0000000008007480        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
  *(.init)
- .init          0x0000000008006c98        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
-                0x0000000008006c98                _init
- .init          0x0000000008006c9c        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ .init          0x0000000008007480        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+                0x0000000008007480                _init
+ .init          0x0000000008007484        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
  *(.fini)
- .fini          0x0000000008006ca4        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
-                0x0000000008006ca4                _fini
- .fini          0x0000000008006ca8        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
- .fini.__stub   0x0000000008006cb0       0x10 linker stubs
-                0x0000000008006cc0                . = ALIGN (0x4)
-                0x0000000008006cc0                _etext = .
+ .fini          0x000000000800748c        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+                0x000000000800748c                _fini
+ .fini          0x0000000008007490        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ .fini.__stub   0x0000000008007498       0x10 linker stubs
+                0x00000000080074a8                . = ALIGN (0x4)
+                0x00000000080074a8                _etext = .
 
-.vfp11_veneer   0x0000000008006cc0        0x0
- .vfp11_veneer  0x0000000008006cc0        0x0 linker stubs
+.vfp11_veneer   0x00000000080074a8        0x0
+ .vfp11_veneer  0x00000000080074a8        0x0 linker stubs
 
-.v4_bx          0x0000000008006cc0        0x0
- .v4_bx         0x0000000008006cc0        0x0 linker stubs
+.v4_bx          0x00000000080074a8        0x0
+ .v4_bx         0x00000000080074a8        0x0 linker stubs
 
-.iplt           0x0000000008006cc0        0x0
- .iplt          0x0000000008006cc0        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+.iplt           0x00000000080074a8        0x0
+ .iplt          0x00000000080074a8        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
-.rel.dyn        0x0000000008006cc0        0x0
- .rel.iplt      0x0000000008006cc0        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+.rel.dyn        0x00000000080074a8        0x0
+ .rel.iplt      0x00000000080074a8        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008006cc0        0x0
-                0x0000000008006cc0                __exidx_start = .
+.ARM            0x00000000080074a8        0x0
+                0x00000000080074a8                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008006cc0                __exidx_end = .
+                0x00000000080074a8                __exidx_end = .
 
-.preinit_array  0x0000000008006cc0        0x0
-                0x0000000008006cc0                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00000000080074a8        0x0
+                0x00000000080074a8                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008006cc0                PROVIDE (__preinit_array_end, .)
+                0x00000000080074a8                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008006cc0        0x8
-                0x0000000008006cc0                PROVIDE (__init_array_start, .)
+.init_array     0x00000000080074a8        0x8
+                0x00000000080074a8                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  .init_array.00000
-                0x0000000008006cc0        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+                0x00000000080074a8        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0000000008006cc4        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
-                0x0000000008006cc8                PROVIDE (__init_array_end, .)
+ .init_array    0x00000000080074ac        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+                0x00000000080074b0                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000000008006cc8        0x4
-                0x0000000008006cc8                PROVIDE (__fini_array_start, .)
+.fini_array     0x00000000080074b0        0x4
+                0x00000000080074b0                PROVIDE (__fini_array_start, .)
  *(.fini_array*)
- .fini_array    0x0000000008006cc8        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .fini_array    0x00000000080074b0        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
  *(SORT(.fini_array.*))
-                0x0000000008006ccc                PROVIDE (__fini_array_end, .)
-                0x0000000008006ccc                _sidata = .
+                0x00000000080074b4                PROVIDE (__fini_array_end, .)
+                0x00000000080074b4                _sidata = .
 
-.data           0x0000000020000000      0x854 load address 0x0000000008006ccc
+.data           0x0000000020000000      0x854 load address 0x00000000080074b4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -24938,21 +24941,21 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
                 0x0000000020000854                . = ALIGN (0x4)
                 0x0000000020000854                _edata = .
 
-.jcr            0x0000000020000854        0x0 load address 0x0000000008007520
+.jcr            0x0000000020000854        0x0 load address 0x0000000008007d08
  .jcr           0x0000000020000854        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
 .tm_clone_table
-                0x0000000020000854        0x0 load address 0x0000000008007520
+                0x0000000020000854        0x0 load address 0x0000000008007d08
  .tm_clone_table
                 0x0000000020000854        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
  .tm_clone_table
                 0x0000000020000854        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
 
-.igot.plt       0x0000000020000854        0x0 load address 0x0000000008007520
+.igot.plt       0x0000000020000854        0x0 load address 0x0000000008007d08
  .igot.plt      0x0000000020000854        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
                 0x0000000020000854                . = ALIGN (0x4)
 
-.bss            0x0000000020000854      0x23c load address 0x0000000008007520
+.bss            0x0000000020000854      0x278 load address 0x0000000008007d08
                 0x0000000020000854                _sbss = .
                 0x0000000020000854                __bss_start__ = _sbss
  *(.bss)
@@ -24996,13 +24999,13 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
                 0x000000002000090c       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
                 0x000000002000090c                __malloc_current_mallinfo
  *(COMMON)
- COMMON         0x0000000020000934      0x158 build/src/gimbal_mpu6050.o
+ COMMON         0x0000000020000934      0x194 build/src/gimbal_mpu6050.o
                 0x0000000020000934                offset_ax
                 0x0000000020000938                offset_gx
                 0x000000002000093c                kal_deg
                 0x0000000020000940                i2c_async_len
-                0x0000000020000944                Q_angle
-                0x0000000020000948                p
+                0x0000000020000944                p_11_y
+                0x0000000020000948                Q_angle
                 0x000000002000094c                accel_x
                 0x0000000020000950                samp_Time
                 0x0000000020000954                accel_angle_x
@@ -25015,79 +25018,95 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
                 0x0000000020000970                x_angle
                 0x0000000020000974                offset_gz
                 0x0000000020000978                flag
-                0x000000002000097c                pre_accel_x
-                0x0000000020000980                duty_PhaseW
-                0x0000000020000984                k
+                0x000000002000097c                k_0_x
+                0x0000000020000980                pre_accel_x
+                0x0000000020000984                duty_PhaseW
                 0x0000000020000988                avg_accel_z
-                0x000000002000098c                temp
-                0x0000000020000990                mpu6050_reg_buffer
-                0x00000000200009a0                angle_z
-                0x00000000200009a4                gyro_y
-                0x00000000200009a8                i2c_async_event_handler
-                0x00000000200009ac                S
-                0x00000000200009b0                accel_y
-                0x00000000200009b4                i2c_async_reg
-                0x00000000200009b8                pre_angle_x
-                0x00000000200009bc                pre_angle_y
-                0x00000000200009c0                print_Time
-                0x00000000200009c4                gyro_angle_y
-                0x00000000200009c8                R_angle
-                0x00000000200009cc                kd_y
-                0x00000000200009d0                i
-                0x00000000200009d4                kp_x
-                0x00000000200009d8                val
-                0x00000000200009dc                angle_y
-                0x00000000200009e0                avg_gyro_x
-                0x00000000200009e4                dma_event_handler
-                0x00000000200009e8                dbg_period
-                0x00000000200009ec                offset_gy
-                0x00000000200009f0                i2c_async_stage
-                0x00000000200009f4                ema_val
-                0x00000000200009f8                angle_x
-                0x00000000200009fc                pre_ema_val
-                0x0000000020000a00                x_bias
-                0x0000000020000a04                y
-                0x0000000020000a08                gyro_x
-                0x0000000020000a0c                ux
-                0x0000000020000a10                avg_accel_x
-                0x0000000020000a14                offset_ay
-                0x0000000020000a18                avg_gyro_z
-                0x0000000020000a1c                buf
-                0x0000000020000a2c                gyro_angle_z
-                0x0000000020000a30                phaseV
-                0x0000000020000a34                i2c_async_buf
-                0x0000000020000a38                TIM2_Count
-                0x0000000020000a3c                avg_accel_y
-                0x0000000020000a40                kd_x
-                0x0000000020000a44                dt
-                0x0000000020000a48                ki_y
-                0x0000000020000a4c                phaseU
-                0x0000000020000a50                Q_gyro
-                0x0000000020000a54                accel_z
-                0x0000000020000a58                accel_angle_y
-                0x0000000020000a5c                e
-                0x0000000020000a70                phaseW
-                0x0000000020000a74                gyro_angle_x
-                0x0000000020000a78                func_count
-                0x0000000020000a7c                gyro_z
-                0x0000000020000a80                offset_az
-                0x0000000020000a84                duty_PhaseU
-                0x0000000020000a88                ki_x
- COMMON         0x0000000020000a8c        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
-                0x0000000020000a8c                errno
-                0x0000000020000a90                . = ALIGN (0x4)
-                0x0000000020000a90                _ebss = .
-                0x0000000020000a90                __bss_end__ = _ebss
+                0x000000002000098c                y_bias
+                0x0000000020000990                y_y
+                0x0000000020000994                temp
+                0x0000000020000998                mpu6050_reg_buffer
+                0x00000000200009a8                angle_z
+                0x00000000200009ac                gyro_y
+                0x00000000200009b0                i2c_async_event_handler
+                0x00000000200009b4                accel_y
+                0x00000000200009b8                i2c_async_reg
+                0x00000000200009bc                pre_angle_x
+                0x00000000200009c0                pre_angle_y
+                0x00000000200009c4                print_Time
+                0x00000000200009c8                p_11_x
+                0x00000000200009cc                y_x
+                0x00000000200009d0                gyro_angle_y
+                0x00000000200009d4                p_00_y
+                0x00000000200009d8                k_1_y
+                0x00000000200009dc                R_angle
+                0x00000000200009e0                kd_y
+                0x00000000200009e4                dbg_period_y
+                0x00000000200009e8                i
+                0x00000000200009ec                kp_x
+                0x00000000200009f0                val
+                0x00000000200009f4                dbg_period_x
+                0x00000000200009f8                angle_y
+                0x00000000200009fc                avg_gyro_x
+                0x0000000020000a00                dma_event_handler
+                0x0000000020000a04                offset_gy
+                0x0000000020000a08                i2c_async_stage
+                0x0000000020000a0c                p_01_y
+                0x0000000020000a10                ema_val
+                0x0000000020000a14                angle_x
+                0x0000000020000a18                k_0_y
+                0x0000000020000a1c                pre_ema_val
+                0x0000000020000a20                x_bias
+                0x0000000020000a24                S_y
+                0x0000000020000a28                p_10_y
+                0x0000000020000a2c                gyro_x
+                0x0000000020000a30                ux
+                0x0000000020000a34                avg_accel_x
+                0x0000000020000a38                offset_ay
+                0x0000000020000a3c                avg_gyro_z
+                0x0000000020000a40                buf
+                0x0000000020000a50                gyro_angle_z
+                0x0000000020000a54                phaseV
+                0x0000000020000a58                i2c_async_buf
+                0x0000000020000a5c                TIM2_Count
+                0x0000000020000a60                S_x
+                0x0000000020000a64                avg_accel_y
+                0x0000000020000a68                kd_x
+                0x0000000020000a6c                dt
+                0x0000000020000a70                ki_y
+                0x0000000020000a74                phaseU
+                0x0000000020000a78                Q_gyro
+                0x0000000020000a7c                k_1_x
+                0x0000000020000a80                accel_z
+                0x0000000020000a84                accel_angle_y
+                0x0000000020000a88                e
+                0x0000000020000a9c                phaseW
+                0x0000000020000aa0                p_00_x
+                0x0000000020000aa4                gyro_angle_x
+                0x0000000020000aa8                func_count
+                0x0000000020000aac                gyro_z
+                0x0000000020000ab0                p_10_x
+                0x0000000020000ab4                offset_az
+                0x0000000020000ab8                duty_PhaseU
+                0x0000000020000abc                p_01_x
+                0x0000000020000ac0                y_angle
+                0x0000000020000ac4                ki_x
+ COMMON         0x0000000020000ac8        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+                0x0000000020000ac8                errno
+                0x0000000020000acc                . = ALIGN (0x4)
+                0x0000000020000acc                _ebss = .
+                0x0000000020000acc                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000a90      0x400 load address 0x000000000800775c
-                0x0000000020000a90                . = ALIGN (0x8)
-                0x0000000020000a90                PROVIDE (end, .)
+                0x0000000020000acc      0x404 load address 0x0000000008007f80
+                0x0000000020000ad0                . = ALIGN (0x8)
+ *fill*         0x0000000020000acc        0x4 
+                0x0000000020000ad0                PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
-                0x0000000020000a90                . = (. + _Min_Heap_Size)
-                0x0000000020000e90                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000a90      0x400 
-                0x0000000020000e90                . = ALIGN (0x8)
+                0x0000000020000ad0                . = (. + _Min_Heap_Size)
+                0x0000000020000ed0                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000ad0      0x400 
+                0x0000000020000ed0                . = ALIGN (0x8)
 
 .memory_b1_text
  *(.mb1text)
@@ -25243,97 +25262,97 @@ OUTPUT(build/main.elf elf32-littlearm)
  .comment       0x0000000000000070       0x39 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
  .comment       0x0000000000000070       0x39 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
 
-.debug_info     0x0000000000000000    0x14170
- .debug_info    0x0000000000000000     0x10ce build/src/gimbal_mpu6050.o
- .debug_info    0x00000000000010ce      0xad2 build/src/gimbal_proc.o
- .debug_info    0x0000000000001ba0      0x79b build/src/gimbal_filter.o
- .debug_info    0x000000000000233b      0x660 build/src/syscalls.o
- .debug_info    0x000000000000299b      0x8f4 build/src/gimbal_ctr.o
- .debug_info    0x000000000000328f      0x7e2 build/src/my_math.o
- .debug_info    0x0000000000003a71      0xf21 build/src/gimbal_tim.o
- .debug_info    0x0000000000004992      0x76a build/src/main.o
- .debug_info    0x00000000000050fc       0x90 build/src/stm32f4xx_it.o
- .debug_info    0x000000000000518c      0x5de build/src/system_stm32f4xx.o
- .debug_info    0x000000000000576a      0xbea build/src/usart.o
- .debug_info    0x0000000000006354      0x2a1 build/lib/FreeRTOS/list.o
- .debug_info    0x00000000000065f5     0x1cbf build/lib/FreeRTOS/tasks.o
- .debug_info    0x00000000000082b4      0x533 build/lib/FreeRTOS/portable/port.o
- .debug_info    0x00000000000087e7      0x60d build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_info    0x0000000000008df4      0x741 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_info    0x0000000000009535      0xb8f build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_info    0x000000000000a0c4      0xe4a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_info    0x000000000000af0e      0x545 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_info    0x000000000000b453      0x9ca build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_info    0x000000000000be1d     0x1c69 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_info    0x000000000000da86       0x7b build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
- .debug_info    0x000000000000db01      0x20f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
- .debug_info    0x000000000000dd10      0x1c8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
- .debug_info    0x000000000000ded8       0xbe /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
- .debug_info    0x000000000000df96      0x129 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
- .debug_info    0x000000000000e0bf       0xc8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
- .debug_info    0x000000000000e187       0xc2 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
- .debug_info    0x000000000000e249       0xc2 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
- .debug_info    0x000000000000e30b       0xc2 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
- .debug_info    0x000000000000e3cd      0x10a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
- .debug_info    0x000000000000e4d7       0xef /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
- .debug_info    0x000000000000e5c6      0x894 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
- .debug_info    0x000000000000ee5a      0x105 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
- .debug_info    0x000000000000ef5f      0x915 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
- .debug_info    0x000000000000f874      0xd8b /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
- .debug_info    0x00000000000105ff       0xd5 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
- .debug_info    0x00000000000106d4      0x8b4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
- .debug_info    0x0000000000010f88      0x8f4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
- .debug_info    0x000000000001187c      0x934 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
- .debug_info    0x00000000000121b0      0x9a9 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
- .debug_info    0x0000000000012b59      0xc1c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
- .debug_info    0x0000000000013775      0x9fb /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+.debug_info     0x0000000000000000    0x14a94
+ .debug_info    0x0000000000000000     0x11af build/src/gimbal_mpu6050.o
+ .debug_info    0x00000000000011af      0xbb3 build/src/gimbal_proc.o
+ .debug_info    0x0000000000001d62      0xaa9 build/src/gimbal_filter.o
+ .debug_info    0x000000000000280b      0x660 build/src/syscalls.o
+ .debug_info    0x0000000000002e6b      0x9d5 build/src/gimbal_ctr.o
+ .debug_info    0x0000000000003840      0x8c3 build/src/my_math.o
+ .debug_info    0x0000000000004103      0xff1 build/src/gimbal_tim.o
+ .debug_info    0x00000000000050f4      0x84b build/src/main.o
+ .debug_info    0x000000000000593f       0x90 build/src/stm32f4xx_it.o
+ .debug_info    0x00000000000059cf      0x5de build/src/system_stm32f4xx.o
+ .debug_info    0x0000000000005fad      0xccb build/src/usart.o
+ .debug_info    0x0000000000006c78      0x2a1 build/lib/FreeRTOS/list.o
+ .debug_info    0x0000000000006f19     0x1cbf build/lib/FreeRTOS/tasks.o
+ .debug_info    0x0000000000008bd8      0x533 build/lib/FreeRTOS/portable/port.o
+ .debug_info    0x000000000000910b      0x60d build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_info    0x0000000000009718      0x741 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_info    0x0000000000009e59      0xb8f build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_info    0x000000000000a9e8      0xe4a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_info    0x000000000000b832      0x545 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_info    0x000000000000bd77      0x9ca build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_info    0x000000000000c741     0x1c69 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_info    0x000000000000e3aa       0x7b build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
+ .debug_info    0x000000000000e425      0x20f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+ .debug_info    0x000000000000e634      0x1c8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+ .debug_info    0x000000000000e7fc       0xbe /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
+ .debug_info    0x000000000000e8ba      0x129 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+ .debug_info    0x000000000000e9e3       0xc8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+ .debug_info    0x000000000000eaab       0xc2 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .debug_info    0x000000000000eb6d       0xc2 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
+ .debug_info    0x000000000000ec2f       0xc2 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
+ .debug_info    0x000000000000ecf1      0x10a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+ .debug_info    0x000000000000edfb       0xef /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+ .debug_info    0x000000000000eeea      0x894 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
+ .debug_info    0x000000000000f77e      0x105 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+ .debug_info    0x000000000000f883      0x915 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+ .debug_info    0x0000000000010198      0xd8b /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+ .debug_info    0x0000000000010f23       0xd5 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
+ .debug_info    0x0000000000010ff8      0x8b4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+ .debug_info    0x00000000000118ac      0x8f4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+ .debug_info    0x00000000000121a0      0x934 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+ .debug_info    0x0000000000012ad4      0x9a9 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x000000000001347d      0xc1c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+ .debug_info    0x0000000000014099      0x9fb /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
 
-.debug_abbrev   0x0000000000000000     0x3751
+.debug_abbrev   0x0000000000000000     0x3783
  .debug_abbrev  0x0000000000000000      0x244 build/src/gimbal_mpu6050.o
  .debug_abbrev  0x0000000000000244      0x1c0 build/src/gimbal_proc.o
- .debug_abbrev  0x0000000000000404       0xf3 build/src/gimbal_filter.o
- .debug_abbrev  0x00000000000004f7      0x174 build/src/syscalls.o
- .debug_abbrev  0x000000000000066b      0x120 build/src/gimbal_ctr.o
- .debug_abbrev  0x000000000000078b      0x132 build/src/my_math.o
- .debug_abbrev  0x00000000000008bd      0x223 build/src/gimbal_tim.o
- .debug_abbrev  0x0000000000000ae0       0xf7 build/src/main.o
- .debug_abbrev  0x0000000000000bd7       0x2f build/src/stm32f4xx_it.o
- .debug_abbrev  0x0000000000000c06      0x13b build/src/system_stm32f4xx.o
- .debug_abbrev  0x0000000000000d41      0x16a build/src/usart.o
- .debug_abbrev  0x0000000000000eab       0xc1 build/lib/FreeRTOS/list.o
- .debug_abbrev  0x0000000000000f6c      0x281 build/lib/FreeRTOS/tasks.o
- .debug_abbrev  0x00000000000011ed      0x1d1 build/lib/FreeRTOS/portable/port.o
- .debug_abbrev  0x00000000000013be      0x1a8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_abbrev  0x0000000000001566      0x15a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_abbrev  0x00000000000016c0      0x169 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_abbrev  0x0000000000001829      0x1bf build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_abbrev  0x00000000000019e8      0x14a build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_abbrev  0x0000000000001b32      0x15a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_abbrev  0x0000000000001c8c      0x18c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_abbrev  0x0000000000001e18       0x12 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
- .debug_abbrev  0x0000000000001e2a      0x13a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
- .debug_abbrev  0x0000000000001f64       0xed /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
- .debug_abbrev  0x0000000000002051       0x4f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
- .debug_abbrev  0x00000000000020a0       0x9a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
- .debug_abbrev  0x000000000000213a       0x6f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
- .debug_abbrev  0x00000000000021a9       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
- .debug_abbrev  0x00000000000021bd       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
- .debug_abbrev  0x00000000000021d1       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
- .debug_abbrev  0x00000000000021e5       0xb8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
- .debug_abbrev  0x000000000000229d       0xbd /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
- .debug_abbrev  0x000000000000235a      0x180 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
- .debug_abbrev  0x00000000000024da       0xba /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
- .debug_abbrev  0x0000000000002594      0x1fa /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
- .debug_abbrev  0x000000000000278e      0x2ad /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
- .debug_abbrev  0x0000000000002a3b       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
- .debug_abbrev  0x0000000000002a4f      0x19a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
- .debug_abbrev  0x0000000000002be9      0x1fd /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
- .debug_abbrev  0x0000000000002de6      0x20f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
- .debug_abbrev  0x0000000000002ff5      0x285 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
- .debug_abbrev  0x000000000000327a      0x27b /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
- .debug_abbrev  0x00000000000034f5      0x25c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+ .debug_abbrev  0x0000000000000404      0x125 build/src/gimbal_filter.o
+ .debug_abbrev  0x0000000000000529      0x174 build/src/syscalls.o
+ .debug_abbrev  0x000000000000069d      0x120 build/src/gimbal_ctr.o
+ .debug_abbrev  0x00000000000007bd      0x132 build/src/my_math.o
+ .debug_abbrev  0x00000000000008ef      0x223 build/src/gimbal_tim.o
+ .debug_abbrev  0x0000000000000b12       0xf7 build/src/main.o
+ .debug_abbrev  0x0000000000000c09       0x2f build/src/stm32f4xx_it.o
+ .debug_abbrev  0x0000000000000c38      0x13b build/src/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000000d73      0x16a build/src/usart.o
+ .debug_abbrev  0x0000000000000edd       0xc1 build/lib/FreeRTOS/list.o
+ .debug_abbrev  0x0000000000000f9e      0x281 build/lib/FreeRTOS/tasks.o
+ .debug_abbrev  0x000000000000121f      0x1d1 build/lib/FreeRTOS/portable/port.o
+ .debug_abbrev  0x00000000000013f0      0x1a8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_abbrev  0x0000000000001598      0x15a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_abbrev  0x00000000000016f2      0x169 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_abbrev  0x000000000000185b      0x1bf build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_abbrev  0x0000000000001a1a      0x14a build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_abbrev  0x0000000000001b64      0x15a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_abbrev  0x0000000000001cbe      0x18c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_abbrev  0x0000000000001e4a       0x12 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
+ .debug_abbrev  0x0000000000001e5c      0x13a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+ .debug_abbrev  0x0000000000001f96       0xed /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+ .debug_abbrev  0x0000000000002083       0x4f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
+ .debug_abbrev  0x00000000000020d2       0x9a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+ .debug_abbrev  0x000000000000216c       0x6f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+ .debug_abbrev  0x00000000000021db       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .debug_abbrev  0x00000000000021ef       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
+ .debug_abbrev  0x0000000000002203       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
+ .debug_abbrev  0x0000000000002217       0xb8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x00000000000022cf       0xbd /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+ .debug_abbrev  0x000000000000238c      0x180 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x000000000000250c       0xba /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+ .debug_abbrev  0x00000000000025c6      0x1fa /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+ .debug_abbrev  0x00000000000027c0      0x2ad /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+ .debug_abbrev  0x0000000000002a6d       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000002a81      0x19a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+ .debug_abbrev  0x0000000000002c1b      0x1fd /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+ .debug_abbrev  0x0000000000002e18      0x20f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000003027      0x285 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x00000000000032ac      0x27b /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+ .debug_abbrev  0x0000000000003527      0x25c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
 
-.debug_aranges  0x0000000000000000     0x1188
+.debug_aranges  0x0000000000000000     0x1180
  .debug_aranges
                 0x0000000000000000       0x88 build/src/gimbal_mpu6050.o
  .debug_aranges
@@ -25347,394 +25366,393 @@ OUTPUT(build/main.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000218       0x38 build/src/my_math.o
  .debug_aranges
-                0x0000000000000250       0x80 build/src/gimbal_tim.o
+                0x0000000000000250       0x78 build/src/gimbal_tim.o
  .debug_aranges
-                0x00000000000002d0       0x20 build/src/main.o
+                0x00000000000002c8       0x20 build/src/main.o
  .debug_aranges
-                0x00000000000002f0       0x48 build/src/stm32f4xx_it.o
+                0x00000000000002e8       0x48 build/src/stm32f4xx_it.o
  .debug_aranges
-                0x0000000000000338       0x30 build/src/system_stm32f4xx.o
+                0x0000000000000330       0x30 build/src/system_stm32f4xx.o
  .debug_aranges
-                0x0000000000000368       0x60 build/src/usart.o
+                0x0000000000000360       0x60 build/src/usart.o
  .debug_aranges
-                0x00000000000003c8       0x40 build/lib/FreeRTOS/list.o
+                0x00000000000003c0       0x40 build/lib/FreeRTOS/list.o
  .debug_aranges
-                0x0000000000000408      0x1c0 build/lib/FreeRTOS/tasks.o
+                0x0000000000000400      0x1c0 build/lib/FreeRTOS/tasks.o
  .debug_aranges
-                0x00000000000005c8       0x80 build/lib/FreeRTOS/portable/port.o
+                0x00000000000005c0       0x80 build/lib/FreeRTOS/portable/port.o
  .debug_aranges
-                0x0000000000000648       0x88 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+                0x0000000000000640       0x88 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
  .debug_aranges
-                0x00000000000006d0       0xb0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+                0x00000000000006c8       0xb0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
  .debug_aranges
-                0x0000000000000780      0x130 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+                0x0000000000000778      0x130 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
  .debug_aranges
-                0x00000000000008b0      0x1c0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+                0x00000000000008a8      0x1c0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
  .debug_aranges
-                0x0000000000000a70       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+                0x0000000000000a68       0x40 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
  .debug_aranges
-                0x0000000000000ab0      0x100 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+                0x0000000000000aa8      0x100 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
  .debug_aranges
-                0x0000000000000bb0      0x2f8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+                0x0000000000000ba8      0x2f8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
  .debug_aranges
-                0x0000000000000ea8       0x28 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
+                0x0000000000000ea0       0x28 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
  .debug_aranges
-                0x0000000000000ed0       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+                0x0000000000000ec8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
  .debug_aranges
-                0x0000000000000ef0       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+                0x0000000000000ee8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
  .debug_aranges
-                0x0000000000000f10       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
+                0x0000000000000f08       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
  .debug_aranges
-                0x0000000000000f28       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+                0x0000000000000f20       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
  .debug_aranges
-                0x0000000000000f48       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+                0x0000000000000f40       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
  .debug_aranges
-                0x0000000000000f68       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+                0x0000000000000f60       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
  .debug_aranges
-                0x0000000000000f88       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
+                0x0000000000000f80       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
  .debug_aranges
-                0x0000000000000fa8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
+                0x0000000000000fa0       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
  .debug_aranges
-                0x0000000000000fc8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+                0x0000000000000fc0       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
  .debug_aranges
-                0x0000000000000fe8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+                0x0000000000000fe0       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
  .debug_aranges
-                0x0000000000001008       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
+                0x0000000000001000       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
  .debug_aranges
-                0x0000000000001020       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+                0x0000000000001018       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
  .debug_aranges
-                0x0000000000001040       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+                0x0000000000001038       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
  .debug_aranges
-                0x0000000000001068       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+                0x0000000000001060       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
  .debug_aranges
-                0x0000000000001088       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
+                0x0000000000001080       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
  .debug_aranges
-                0x00000000000010a8       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+                0x00000000000010a0       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
  .debug_aranges
-                0x00000000000010d0       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+                0x00000000000010c8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
  .debug_aranges
-                0x00000000000010f0       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+                0x00000000000010e8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
  .debug_aranges
-                0x0000000000001110       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+                0x0000000000001108       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
  .debug_aranges
-                0x0000000000001138       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+                0x0000000000001130       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
  .debug_aranges
-                0x0000000000001160       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+                0x0000000000001158       0x28 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
 
-.debug_ranges   0x0000000000000000      0xee8
+.debug_ranges   0x0000000000000000      0xee0
  .debug_ranges  0x0000000000000000       0x78 build/src/gimbal_mpu6050.o
  .debug_ranges  0x0000000000000078       0x60 build/src/gimbal_proc.o
  .debug_ranges  0x00000000000000d8       0x30 build/src/gimbal_filter.o
  .debug_ranges  0x0000000000000108       0xa0 build/src/syscalls.o
  .debug_ranges  0x00000000000001a8       0x20 build/src/gimbal_ctr.o
  .debug_ranges  0x00000000000001c8       0x28 build/src/my_math.o
- .debug_ranges  0x00000000000001f0       0x70 build/src/gimbal_tim.o
- .debug_ranges  0x0000000000000260       0x10 build/src/main.o
- .debug_ranges  0x0000000000000270       0x38 build/src/stm32f4xx_it.o
- .debug_ranges  0x00000000000002a8       0x20 build/src/system_stm32f4xx.o
- .debug_ranges  0x00000000000002c8       0x50 build/src/usart.o
- .debug_ranges  0x0000000000000318       0x30 build/lib/FreeRTOS/list.o
- .debug_ranges  0x0000000000000348      0x1b0 build/lib/FreeRTOS/tasks.o
- .debug_ranges  0x00000000000004f8       0x70 build/lib/FreeRTOS/portable/port.o
- .debug_ranges  0x0000000000000568       0x78 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_ranges  0x00000000000005e0       0xa0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_ranges  0x0000000000000680      0x120 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_ranges  0x00000000000007a0      0x1b0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_ranges  0x0000000000000950       0x30 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_ranges  0x0000000000000980       0xf0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_ranges  0x0000000000000a70      0x2e8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_ranges  0x0000000000000d58       0x20 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
- .debug_ranges  0x0000000000000d78       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
- .debug_ranges  0x0000000000000d88       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
- .debug_ranges  0x0000000000000d98       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
- .debug_ranges  0x0000000000000da8       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
- .debug_ranges  0x0000000000000db8       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
- .debug_ranges  0x0000000000000dc8       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
- .debug_ranges  0x0000000000000dd8       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
- .debug_ranges  0x0000000000000de8       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
- .debug_ranges  0x0000000000000e00       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
- .debug_ranges  0x0000000000000e50       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
- .debug_ranges  0x0000000000000e68       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
- .debug_ranges  0x0000000000000e78       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
- .debug_ranges  0x0000000000000e88       0x30 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
- .debug_ranges  0x0000000000000eb8       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
- .debug_ranges  0x0000000000000ed0       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+ .debug_ranges  0x00000000000001f0       0x68 build/src/gimbal_tim.o
+ .debug_ranges  0x0000000000000258       0x10 build/src/main.o
+ .debug_ranges  0x0000000000000268       0x38 build/src/stm32f4xx_it.o
+ .debug_ranges  0x00000000000002a0       0x20 build/src/system_stm32f4xx.o
+ .debug_ranges  0x00000000000002c0       0x50 build/src/usart.o
+ .debug_ranges  0x0000000000000310       0x30 build/lib/FreeRTOS/list.o
+ .debug_ranges  0x0000000000000340      0x1b0 build/lib/FreeRTOS/tasks.o
+ .debug_ranges  0x00000000000004f0       0x70 build/lib/FreeRTOS/portable/port.o
+ .debug_ranges  0x0000000000000560       0x78 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_ranges  0x00000000000005d8       0xa0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_ranges  0x0000000000000678      0x120 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_ranges  0x0000000000000798      0x1b0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_ranges  0x0000000000000948       0x30 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_ranges  0x0000000000000978       0xf0 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_ranges  0x0000000000000a68      0x2e8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_ranges  0x0000000000000d50       0x20 build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
+ .debug_ranges  0x0000000000000d70       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+ .debug_ranges  0x0000000000000d80       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+ .debug_ranges  0x0000000000000d90       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+ .debug_ranges  0x0000000000000da0       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+ .debug_ranges  0x0000000000000db0       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+ .debug_ranges  0x0000000000000dc0       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+ .debug_ranges  0x0000000000000dd0       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+ .debug_ranges  0x0000000000000de0       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+ .debug_ranges  0x0000000000000df8       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+ .debug_ranges  0x0000000000000e48       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+ .debug_ranges  0x0000000000000e60       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+ .debug_ranges  0x0000000000000e70       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+ .debug_ranges  0x0000000000000e80       0x30 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+ .debug_ranges  0x0000000000000eb0       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+ .debug_ranges  0x0000000000000ec8       0x18 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
 
-.debug_macro    0x0000000000000000    0x1452e
- .debug_macro   0x0000000000000000      0x2ed build/src/gimbal_mpu6050.o
- .debug_macro   0x00000000000002ed      0x88c build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000b79       0x12 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000b8b       0x22 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000bad       0x44 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000bf1       0xe3 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000cd4       0x22 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000cf6      0x1df build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000ed5       0x35 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000f0a       0x50 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000f5a       0x58 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000fb2       0x35 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000000fe7       0x9c build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000001083      0x166 build/src/gimbal_mpu6050.o
- .debug_macro   0x00000000000011e9       0x52 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000123b       0x16 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000001251       0x43 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000001294      0x180 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000001414      0x29d build/src/gimbal_mpu6050.o
- .debug_macro   0x00000000000016b1       0x10 build/src/gimbal_mpu6050.o
- .debug_macro   0x00000000000016c1       0x35 build/src/gimbal_mpu6050.o
- .debug_macro   0x00000000000016f6      0x1e1 build/src/gimbal_mpu6050.o
- .debug_macro   0x00000000000018d7       0xd6 build/src/gimbal_mpu6050.o
- .debug_macro   0x00000000000019ad       0x5e build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000001a0b      0xe66 build/src/gimbal_mpu6050.o
- .debug_macro   0x0000000000002871     0x8ca5 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000b516       0x35 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000b54b      0x44f build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000b99a       0xb2 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000ba4c      0x477 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000bec3       0xb5 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000bf78      0x41c build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000c394      0x2f4 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000c688      0x2ba build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000c942       0x64 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000c9a6       0xee build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000ca94      0x650 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000d0e4      0x57b build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000d65f      0x342 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000d9a1      0x36c build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000dd0d       0xf7 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000de04      0x73b build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000e53f      0x223 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000e762       0x34 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000e796       0x82 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000e818      0x144 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000e95c       0xc3 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000ea1f       0x40 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000ea5f      0x3cf build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000ee2e      0x188 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000efb6      0x149 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f0ff      0x279 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f378       0x1c build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f394       0x16 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f3aa       0x52 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f3fc       0x10 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f40c       0x10 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f41c       0xe8 build/src/gimbal_mpu6050.o
- .debug_macro   0x000000000000f504      0x2ed build/src/gimbal_proc.o
- .debug_macro   0x000000000000f7f1       0xee build/src/gimbal_proc.o
- .debug_macro   0x000000000000f8df       0x10 build/src/gimbal_proc.o
- .debug_macro   0x000000000000f8ef      0x2ee build/src/gimbal_filter.o
- .debug_macro   0x000000000000fbdd      0x1da build/src/syscalls.o
- .debug_macro   0x000000000000fdb7       0x4a build/src/syscalls.o
- .debug_macro   0x000000000000fe01       0x10 build/src/syscalls.o
- .debug_macro   0x000000000000fe11       0x10 build/src/syscalls.o
- .debug_macro   0x000000000000fe21       0x10 build/src/syscalls.o
- .debug_macro   0x000000000000fe31       0x10 build/src/syscalls.o
- .debug_macro   0x000000000000fe41       0x22 build/src/syscalls.o
- .debug_macro   0x000000000000fe63       0xbe build/src/syscalls.o
- .debug_macro   0x000000000000ff21       0x10 build/src/syscalls.o
- .debug_macro   0x000000000000ff31       0x35 build/src/syscalls.o
- .debug_macro   0x000000000000ff66      0x122 build/src/syscalls.o
- .debug_macro   0x0000000000010088       0x16 build/src/syscalls.o
- .debug_macro   0x000000000001009e       0x16 build/src/syscalls.o
- .debug_macro   0x00000000000100b4       0x29 build/src/syscalls.o
- .debug_macro   0x00000000000100dd       0x10 build/src/syscalls.o
- .debug_macro   0x00000000000100ed      0x241 build/src/syscalls.o
- .debug_macro   0x000000000001032e       0x1c build/src/syscalls.o
- .debug_macro   0x000000000001034a       0x10 build/src/syscalls.o
- .debug_macro   0x000000000001035a       0x16 build/src/syscalls.o
- .debug_macro   0x0000000000010370      0x197 build/src/syscalls.o
- .debug_macro   0x0000000000010507      0x159 build/src/syscalls.o
- .debug_macro   0x0000000000010660       0x16 build/src/syscalls.o
- .debug_macro   0x0000000000010676       0x2e build/src/syscalls.o
- .debug_macro   0x00000000000106a4       0x82 build/src/syscalls.o
- .debug_macro   0x0000000000010726      0x2ee build/src/gimbal_ctr.o
- .debug_macro   0x0000000000010a14      0x2ff build/src/my_math.o
- .debug_macro   0x0000000000010d13       0x16 build/src/my_math.o
- .debug_macro   0x0000000000010d29      0x2ed build/src/gimbal_tim.o
- .debug_macro   0x0000000000011016       0x4c build/src/gimbal_tim.o
- .debug_macro   0x0000000000011062      0x2e3 build/src/main.o
- .debug_macro   0x0000000000011345       0x11 build/src/stm32f4xx_it.o
- .debug_macro   0x0000000000011356      0x1dc build/src/system_stm32f4xx.o
- .debug_macro   0x0000000000011532      0x2ed build/src/usart.o
- .debug_macro   0x000000000001181f      0x167 build/lib/FreeRTOS/list.o
- .debug_macro   0x0000000000011986      0x215 build/lib/FreeRTOS/tasks.o
- .debug_macro   0x0000000000011b9b       0x11 build/lib/FreeRTOS/tasks.o
- .debug_macro   0x0000000000011bac      0x188 build/lib/FreeRTOS/portable/port.o
- .debug_macro   0x0000000000011d34      0x1c2 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_macro   0x0000000000011ef6      0x2ee build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_macro   0x00000000000121e4      0x216 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_macro   0x00000000000123fa      0x471 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_macro   0x000000000001286b      0x1d4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_macro   0x0000000000012a3f      0x2b4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_macro   0x0000000000012cf3      0x295 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_macro   0x0000000000012f88      0x64a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_macro   0x00000000000135d2      0x1c8 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_macro   0x000000000001379a       0x7c build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_macro   0x0000000000013816      0x1da build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_macro   0x00000000000139f0      0x21d build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_macro   0x0000000000013c0d      0x1ec build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_macro   0x0000000000013df9      0x735 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+.debug_macro    0x0000000000000000    0x1451f
+ .debug_macro   0x0000000000000000      0x2ee build/src/gimbal_mpu6050.o
+ .debug_macro   0x00000000000002ee      0x88c build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000b7a       0x12 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000b8c       0x22 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000bae       0x44 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000bf2       0xe3 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000cd5       0x22 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000cf7      0x1df build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000ed6       0x35 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000f0b       0x50 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000f5b       0x58 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000fb3       0x35 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000000fe8       0x9c build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000001084      0x166 build/src/gimbal_mpu6050.o
+ .debug_macro   0x00000000000011ea       0x52 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000123c       0x16 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000001252       0x43 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000001295      0x180 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000001415      0x29d build/src/gimbal_mpu6050.o
+ .debug_macro   0x00000000000016b2       0x10 build/src/gimbal_mpu6050.o
+ .debug_macro   0x00000000000016c2       0x35 build/src/gimbal_mpu6050.o
+ .debug_macro   0x00000000000016f7      0x1e1 build/src/gimbal_mpu6050.o
+ .debug_macro   0x00000000000018d8       0xd6 build/src/gimbal_mpu6050.o
+ .debug_macro   0x00000000000019ae       0x5e build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000001a0c      0xe66 build/src/gimbal_mpu6050.o
+ .debug_macro   0x0000000000002872     0x8ca5 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000b517       0x35 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000b54c      0x44f build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000b99b       0xb2 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000ba4d      0x477 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000bec4       0xb5 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000bf79      0x41c build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000c395      0x2f4 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000c689      0x2ba build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000c943       0x64 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000c9a7       0xee build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000ca95      0x650 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000d0e5      0x57b build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000d660      0x342 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000d9a2      0x36c build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000dd0e       0xf7 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000de05      0x73b build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000e540      0x223 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000e763       0x34 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000e797       0x82 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000e819      0x144 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000e95d       0xc3 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000ea20       0x40 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000ea60      0x3cf build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000ee2f      0x188 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000efb7      0x149 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000f100      0x279 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000f379       0x1c build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000f395       0x16 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000f3ab       0x52 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000f3fd       0x10 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000f40d       0xe8 build/src/gimbal_mpu6050.o
+ .debug_macro   0x000000000000f4f5      0x2ee build/src/gimbal_proc.o
+ .debug_macro   0x000000000000f7e3       0xee build/src/gimbal_proc.o
+ .debug_macro   0x000000000000f8d1       0x10 build/src/gimbal_proc.o
+ .debug_macro   0x000000000000f8e1      0x2e8 build/src/gimbal_filter.o
+ .debug_macro   0x000000000000fbc9      0x1da build/src/syscalls.o
+ .debug_macro   0x000000000000fda3       0x4a build/src/syscalls.o
+ .debug_macro   0x000000000000fded       0x10 build/src/syscalls.o
+ .debug_macro   0x000000000000fdfd       0x10 build/src/syscalls.o
+ .debug_macro   0x000000000000fe0d       0x10 build/src/syscalls.o
+ .debug_macro   0x000000000000fe1d       0x10 build/src/syscalls.o
+ .debug_macro   0x000000000000fe2d       0x22 build/src/syscalls.o
+ .debug_macro   0x000000000000fe4f       0xbe build/src/syscalls.o
+ .debug_macro   0x000000000000ff0d       0x10 build/src/syscalls.o
+ .debug_macro   0x000000000000ff1d       0x35 build/src/syscalls.o
+ .debug_macro   0x000000000000ff52      0x122 build/src/syscalls.o
+ .debug_macro   0x0000000000010074       0x16 build/src/syscalls.o
+ .debug_macro   0x000000000001008a       0x16 build/src/syscalls.o
+ .debug_macro   0x00000000000100a0       0x29 build/src/syscalls.o
+ .debug_macro   0x00000000000100c9       0x10 build/src/syscalls.o
+ .debug_macro   0x00000000000100d9      0x241 build/src/syscalls.o
+ .debug_macro   0x000000000001031a       0x1c build/src/syscalls.o
+ .debug_macro   0x0000000000010336       0x10 build/src/syscalls.o
+ .debug_macro   0x0000000000010346       0x16 build/src/syscalls.o
+ .debug_macro   0x000000000001035c      0x197 build/src/syscalls.o
+ .debug_macro   0x00000000000104f3      0x159 build/src/syscalls.o
+ .debug_macro   0x000000000001064c       0x16 build/src/syscalls.o
+ .debug_macro   0x0000000000010662       0x2e build/src/syscalls.o
+ .debug_macro   0x0000000000010690       0x82 build/src/syscalls.o
+ .debug_macro   0x0000000000010712      0x2ef build/src/gimbal_ctr.o
+ .debug_macro   0x0000000000010a01      0x300 build/src/my_math.o
+ .debug_macro   0x0000000000010d01       0x16 build/src/my_math.o
+ .debug_macro   0x0000000000010d17      0x2ee build/src/gimbal_tim.o
+ .debug_macro   0x0000000000011005       0x4c build/src/gimbal_tim.o
+ .debug_macro   0x0000000000011051      0x2e4 build/src/main.o
+ .debug_macro   0x0000000000011335       0x11 build/src/stm32f4xx_it.o
+ .debug_macro   0x0000000000011346      0x1dc build/src/system_stm32f4xx.o
+ .debug_macro   0x0000000000011522      0x2ee build/src/usart.o
+ .debug_macro   0x0000000000011810      0x167 build/lib/FreeRTOS/list.o
+ .debug_macro   0x0000000000011977      0x215 build/lib/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000011b8c       0x11 build/lib/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000011b9d      0x188 build/lib/FreeRTOS/portable/port.o
+ .debug_macro   0x0000000000011d25      0x1c2 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_macro   0x0000000000011ee7      0x2ee build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_macro   0x00000000000121d5      0x216 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_macro   0x00000000000123eb      0x471 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_macro   0x000000000001285c      0x1d4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_macro   0x0000000000012a30      0x2b4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_macro   0x0000000000012ce4      0x295 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_macro   0x0000000000012f79      0x64a build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_macro   0x00000000000135c3      0x1c8 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_macro   0x000000000001378b       0x7c build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_macro   0x0000000000013807      0x1da build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_macro   0x00000000000139e1      0x21d build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_macro   0x0000000000013bfe      0x1ec build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_macro   0x0000000000013dea      0x735 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
 
-.debug_line     0x0000000000000000     0x9b29
+.debug_line     0x0000000000000000     0x9b43
  .debug_line    0x0000000000000000      0x731 build/src/gimbal_mpu6050.o
- .debug_line    0x0000000000000731      0x65f build/src/gimbal_proc.o
- .debug_line    0x0000000000000d90      0x58e build/src/gimbal_filter.o
- .debug_line    0x000000000000131e      0x3b6 build/src/syscalls.o
- .debug_line    0x00000000000016d4      0x56f build/src/gimbal_ctr.o
- .debug_line    0x0000000000001c43      0x5d1 build/src/my_math.o
- .debug_line    0x0000000000002214      0x645 build/src/gimbal_tim.o
- .debug_line    0x0000000000002859      0x50d build/src/main.o
- .debug_line    0x0000000000002d66       0x9f build/src/stm32f4xx_it.o
- .debug_line    0x0000000000002e05      0x45f build/src/system_stm32f4xx.o
- .debug_line    0x0000000000003264      0x633 build/src/usart.o
- .debug_line    0x0000000000003897      0x2ca build/lib/FreeRTOS/list.o
- .debug_line    0x0000000000003b61      0xe2c build/lib/FreeRTOS/tasks.o
- .debug_line    0x000000000000498d      0x3ac build/lib/FreeRTOS/portable/port.o
- .debug_line    0x0000000000004d39      0x549 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_line    0x0000000000005282      0x5dd build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_line    0x000000000000585f      0x6f4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_line    0x0000000000005f53      0x861 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_line    0x00000000000067b4      0x44f build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_line    0x0000000000006c03      0x695 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_line    0x0000000000007298      0xc6b build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_line    0x0000000000007f03       0x8c build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
- .debug_line    0x0000000000007f8f      0x177 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
- .debug_line    0x0000000000008106      0x14a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
- .debug_line    0x0000000000008250       0xa8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
- .debug_line    0x00000000000082f8       0xb9 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
- .debug_line    0x00000000000083b1      0x129 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
- .debug_line    0x00000000000084da      0x179 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
- .debug_line    0x0000000000008653      0x19d /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
- .debug_line    0x00000000000087f0       0x8e /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
- .debug_line    0x000000000000887e       0xc4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
- .debug_line    0x0000000000008942       0x9f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
- .debug_line    0x00000000000089e1       0xf4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
- .debug_line    0x0000000000008ad5       0xb8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
- .debug_line    0x0000000000008b8d      0x171 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
- .debug_line    0x0000000000008cfe      0x38e /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
- .debug_line    0x000000000000908c       0xbb /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
- .debug_line    0x0000000000009147      0x112 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
- .debug_line    0x0000000000009259      0x164 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
- .debug_line    0x00000000000093bd      0x196 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
- .debug_line    0x0000000000009553      0x1c8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
- .debug_line    0x000000000000971b      0x271 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
- .debug_line    0x000000000000998c      0x19d /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+ .debug_line    0x0000000000000731      0x669 build/src/gimbal_proc.o
+ .debug_line    0x0000000000000d9a      0x5b5 build/src/gimbal_filter.o
+ .debug_line    0x000000000000134f      0x3b6 build/src/syscalls.o
+ .debug_line    0x0000000000001705      0x579 build/src/gimbal_ctr.o
+ .debug_line    0x0000000000001c7e      0x5d1 build/src/my_math.o
+ .debug_line    0x000000000000224f      0x624 build/src/gimbal_tim.o
+ .debug_line    0x0000000000002873      0x50d build/src/main.o
+ .debug_line    0x0000000000002d80       0x9f build/src/stm32f4xx_it.o
+ .debug_line    0x0000000000002e1f      0x45f build/src/system_stm32f4xx.o
+ .debug_line    0x000000000000327e      0x633 build/src/usart.o
+ .debug_line    0x00000000000038b1      0x2ca build/lib/FreeRTOS/list.o
+ .debug_line    0x0000000000003b7b      0xe2c build/lib/FreeRTOS/tasks.o
+ .debug_line    0x00000000000049a7      0x3ac build/lib/FreeRTOS/portable/port.o
+ .debug_line    0x0000000000004d53      0x549 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_line    0x000000000000529c      0x5dd build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_line    0x0000000000005879      0x6f4 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_line    0x0000000000005f6d      0x861 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_line    0x00000000000067ce      0x44f build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_line    0x0000000000006c1d      0x695 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_line    0x00000000000072b2      0xc6b build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_line    0x0000000000007f1d       0x8c build/lib/CMSIS/Device/Source/startup_stm32f407xx.o
+ .debug_line    0x0000000000007fa9      0x177 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+ .debug_line    0x0000000000008120      0x14a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+ .debug_line    0x000000000000826a       0xa8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
+ .debug_line    0x0000000000008312       0xb9 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+ .debug_line    0x00000000000083cb      0x129 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+ .debug_line    0x00000000000084f4      0x179 /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .debug_line    0x000000000000866d      0x19d /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_muldivdf3.o)
+ .debug_line    0x000000000000880a       0x8e /usr/lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_arm_truncdfsf2.o)
+ .debug_line    0x0000000000008898       0xc4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+ .debug_line    0x000000000000895c       0x9f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+ .debug_line    0x00000000000089fb       0xf4 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000008aef       0xb8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+ .debug_line    0x0000000000008ba7      0x171 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+ .debug_line    0x0000000000008d18      0x38e /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+ .debug_line    0x00000000000090a6       0xbb /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000009161      0x112 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+ .debug_line    0x0000000000009273      0x164 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+ .debug_line    0x00000000000093d7      0x196 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+ .debug_line    0x000000000000956d      0x1c8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000009735      0x271 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+ .debug_line    0x00000000000099a6      0x19d /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
 
-.debug_str      0x0000000000000000    0x6d6c6
- .debug_str     0x0000000000000000    0x61ed0 build/src/gimbal_mpu6050.o
-                                      0x62236 (size before relaxing)
- .debug_str     0x0000000000061ed0      0x1ec build/src/gimbal_proc.o
-                                      0x619cf (size before relaxing)
- .debug_str     0x00000000000620bc       0xb1 build/src/gimbal_filter.o
-                                      0x61809 (size before relaxing)
- .debug_str     0x000000000006216d     0x1f9e build/src/syscalls.o
+.debug_str      0x0000000000000000    0x6d718
+ .debug_str     0x0000000000000000    0x61f35 build/src/gimbal_mpu6050.o
+                                      0x6229b (size before relaxing)
+ .debug_str     0x0000000000061f35      0x1ec build/src/gimbal_proc.o
+                                      0x61a34 (size before relaxing)
+ .debug_str     0x0000000000062121       0xb7 build/src/gimbal_filter.o
+                                      0x6196d (size before relaxing)
+ .debug_str     0x00000000000621d8     0x1f9e build/src/syscalls.o
                                        0x6d38 (size before relaxing)
- .debug_str     0x000000000006410b       0x45 build/src/gimbal_ctr.o
-                                      0x6189b (size before relaxing)
- .debug_str     0x0000000000064150       0x78 build/src/my_math.o
-                                      0x617d6 (size before relaxing)
- .debug_str     0x00000000000641c8      0x1f5 build/src/gimbal_tim.o
-                                      0x6217b (size before relaxing)
- .debug_str     0x00000000000643bd       0x10 build/src/main.o
-                                      0x617d5 (size before relaxing)
- .debug_str     0x00000000000643cd       0x78 build/src/stm32f4xx_it.o
+ .debug_str     0x0000000000064176       0x45 build/src/gimbal_ctr.o
+                                      0x61900 (size before relaxing)
+ .debug_str     0x00000000000641bb       0x78 build/src/my_math.o
+                                      0x6183b (size before relaxing)
+ .debug_str     0x0000000000064233      0x1dc build/src/gimbal_tim.o
+                                      0x621c7 (size before relaxing)
+ .debug_str     0x000000000006440f       0x10 build/src/main.o
+                                      0x6183a (size before relaxing)
+ .debug_str     0x000000000006441f       0x78 build/src/stm32f4xx_it.o
                                        0x2510 (size before relaxing)
- .debug_str     0x0000000000064445      0x22a build/src/system_stm32f4xx.o
+ .debug_str     0x0000000000064497      0x22a build/src/system_stm32f4xx.o
                                       0x5db53 (size before relaxing)
- .debug_str     0x000000000006466f      0x15a build/src/usart.o
-                                      0x61ab5 (size before relaxing)
- .debug_str     0x00000000000647c9     0x30e0 build/lib/FreeRTOS/list.o
+ .debug_str     0x00000000000646c1      0x15a build/src/usart.o
+                                      0x61b1a (size before relaxing)
+ .debug_str     0x000000000006481b     0x30e0 build/lib/FreeRTOS/list.o
                                        0x879e (size before relaxing)
- .debug_str     0x00000000000678a9     0x2143 build/lib/FreeRTOS/tasks.o
+ .debug_str     0x00000000000678fb     0x2143 build/lib/FreeRTOS/tasks.o
                                        0xa91c (size before relaxing)
- .debug_str     0x00000000000699ec      0x799 build/lib/FreeRTOS/portable/port.o
+ .debug_str     0x0000000000069a3e      0x799 build/lib/FreeRTOS/portable/port.o
                                        0x73ba (size before relaxing)
- .debug_str     0x000000000006a185      0x182 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_str     0x000000000006a1d7      0x182 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
                                       0x5dbed (size before relaxing)
- .debug_str     0x000000000006a307      0x584 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_str     0x000000000006a359      0x584 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
                                       0x5dfab (size before relaxing)
- .debug_str     0x000000000006a88b      0x41b build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_str     0x000000000006a8dd      0x41b build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
                                       0x5de63 (size before relaxing)
- .debug_str     0x000000000006aca6      0xbff build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_str     0x000000000006acf8      0xbff build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
                                       0x5e6fa (size before relaxing)
- .debug_str     0x000000000006b8a5      0x165 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_str     0x000000000006b8f7      0x165 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
                                       0x5db45 (size before relaxing)
- .debug_str     0x000000000006ba0a      0x4b8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_str     0x000000000006ba5c      0x4b8 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
                                       0x5df00 (size before relaxing)
- .debug_str     0x000000000006bec2      0xaaa build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_str     0x000000000006bf14      0xaaa build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
                                       0x5e5e4 (size before relaxing)
- .debug_str     0x000000000006c96c      0x1a9 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+ .debug_str     0x000000000006c9be      0x1a9 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
                                         0x2c7 (size before relaxing)
- .debug_str     0x000000000006cb15       0x5a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+ .debug_str     0x000000000006cb67       0x5a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
                                         0x268 (size before relaxing)
- .debug_str     0x000000000006cb6f       0x9e /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
+ .debug_str     0x000000000006cbc1       0x9e /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_lib_ver.o)
                                         0x274 (size before relaxing)
- .debug_str     0x000000000006cc0d       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+ .debug_str     0x000000000006cc5f       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
                                         0x246 (size before relaxing)
- .debug_str     0x000000000006cc41       0x38 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+ .debug_str     0x000000000006cc93       0x38 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
                                         0x236 (size before relaxing)
- .debug_str     0x000000000006cc79       0xdf /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+ .debug_str     0x000000000006cccb       0xdf /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
                                         0x248 (size before relaxing)
- .debug_str     0x000000000006cd58       0xcb /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+ .debug_str     0x000000000006cdaa       0xcb /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
                                         0x240 (size before relaxing)
- .debug_str     0x000000000006ce23      0x3ee /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
+ .debug_str     0x000000000006ce75      0x3ee /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-impure.o)
                                         0x5dc (size before relaxing)
- .debug_str     0x000000000006d211       0x8d /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+ .debug_str     0x000000000006d263       0x8d /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
                                         0x26a (size before relaxing)
- .debug_str     0x000000000006d29e       0x54 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+ .debug_str     0x000000000006d2f0       0x54 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
                                         0x5f0 (size before relaxing)
- .debug_str     0x000000000006d2f2      0x21a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+ .debug_str     0x000000000006d344      0x21a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
                                         0x7eb (size before relaxing)
- .debug_str     0x000000000006d50c       0x45 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+ .debug_str     0x000000000006d55e       0x45 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
                                         0x5e5 (size before relaxing)
- .debug_str     0x000000000006d551       0x2f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+ .debug_str     0x000000000006d5a3       0x2f /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
                                         0x5d3 (size before relaxing)
- .debug_str     0x000000000006d580       0x33 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+ .debug_str     0x000000000006d5d2       0x33 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
                                         0x624 (size before relaxing)
- .debug_str     0x000000000006d5b3       0x84 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+ .debug_str     0x000000000006d605       0x84 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
                                         0x63c (size before relaxing)
- .debug_str     0x000000000006d637       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+ .debug_str     0x000000000006d689       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
                                         0x735 (size before relaxing)
- .debug_str     0x000000000006d66b       0x5b /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+ .debug_str     0x000000000006d6bd       0x5b /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
                                         0x5fb (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x410c
+.debug_frame    0x0000000000000000     0x40ec
  .debug_frame   0x0000000000000000      0x204 build/src/gimbal_mpu6050.o
- .debug_frame   0x0000000000000204      0x17c build/src/gimbal_proc.o
- .debug_frame   0x0000000000000380       0xd0 build/src/gimbal_filter.o
- .debug_frame   0x0000000000000450      0x2d4 build/src/syscalls.o
- .debug_frame   0x0000000000000724       0x88 build/src/gimbal_ctr.o
- .debug_frame   0x00000000000007ac       0xa8 build/src/my_math.o
- .debug_frame   0x0000000000000854      0x1b0 build/src/gimbal_tim.o
- .debug_frame   0x0000000000000a04       0x30 build/src/main.o
- .debug_frame   0x0000000000000a34       0xb0 build/src/stm32f4xx_it.o
- .debug_frame   0x0000000000000ae4       0x7c build/src/system_stm32f4xx.o
- .debug_frame   0x0000000000000b60      0x154 build/src/usart.o
- .debug_frame   0x0000000000000cb4       0xd8 build/lib/FreeRTOS/list.o
- .debug_frame   0x0000000000000d8c      0x7a8 build/lib/FreeRTOS/tasks.o
- .debug_frame   0x0000000000001534      0x19c build/lib/FreeRTOS/portable/port.o
- .debug_frame   0x00000000000016d0      0x23c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_frame   0x000000000000190c      0x308 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
- .debug_frame   0x0000000000001c14      0x580 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
- .debug_frame   0x0000000000002194      0x83c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_frame   0x00000000000029d0       0xd8 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
- .debug_frame   0x0000000000002aa8      0x490 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_frame   0x0000000000002f38      0xe54 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_frame   0x0000000000003d8c       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
- .debug_frame   0x0000000000003ddc       0x3c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
- .debug_frame   0x0000000000003e18       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
- .debug_frame   0x0000000000003e38       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
- .debug_frame   0x0000000000003e58       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
- .debug_frame   0x0000000000003e78       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
- .debug_frame   0x0000000000003eac       0x2c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
- .debug_frame   0x0000000000003ed8       0x30 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
- .debug_frame   0x0000000000003f08       0x58 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
- .debug_frame   0x0000000000003f60       0x30 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
- .debug_frame   0x0000000000003f90       0x2c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000003fbc       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
- .debug_frame   0x0000000000003ff0       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000004040       0x74 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
- .debug_frame   0x00000000000040b4       0x58 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
+ .debug_frame   0x0000000000000204      0x178 build/src/gimbal_proc.o
+ .debug_frame   0x000000000000037c       0xd0 build/src/gimbal_filter.o
+ .debug_frame   0x000000000000044c      0x2d4 build/src/syscalls.o
+ .debug_frame   0x0000000000000720       0x88 build/src/gimbal_ctr.o
+ .debug_frame   0x00000000000007a8       0xa8 build/src/my_math.o
+ .debug_frame   0x0000000000000850      0x194 build/src/gimbal_tim.o
+ .debug_frame   0x00000000000009e4       0x30 build/src/main.o
+ .debug_frame   0x0000000000000a14       0xb0 build/src/stm32f4xx_it.o
+ .debug_frame   0x0000000000000ac4       0x7c build/src/system_stm32f4xx.o
+ .debug_frame   0x0000000000000b40      0x154 build/src/usart.o
+ .debug_frame   0x0000000000000c94       0xd8 build/lib/FreeRTOS/list.o
+ .debug_frame   0x0000000000000d6c      0x7a8 build/lib/FreeRTOS/tasks.o
+ .debug_frame   0x0000000000001514      0x19c build/lib/FreeRTOS/portable/port.o
+ .debug_frame   0x00000000000016b0      0x23c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_frame   0x00000000000018ec      0x308 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.o
+ .debug_frame   0x0000000000001bf4      0x580 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.o
+ .debug_frame   0x0000000000002174      0x83c build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_frame   0x00000000000029b0       0xd8 build/lib/STM32F4xx_StdPeriph_Driver/src/misc.o
+ .debug_frame   0x0000000000002a88      0x490 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_frame   0x0000000000002f18      0xe54 build/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_frame   0x0000000000003d6c       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)
+ .debug_frame   0x0000000000003dbc       0x3c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-ef_sqrt.o)
+ .debug_frame   0x0000000000003df8       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_matherr.o)
+ .debug_frame   0x0000000000003e18       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-sf_fpclassify.o)
+ .debug_frame   0x0000000000003e38       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000003e58       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-fini.o)
+ .debug_frame   0x0000000000003e8c       0x2c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-init.o)
+ .debug_frame   0x0000000000003eb8       0x30 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000003ee8       0x58 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000000000003f40       0x30 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000003f70       0x2c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000003f9c       0x34 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000003fd0       0x50 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000004020       0x74 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-freer.o)
+ .debug_frame   0x0000000000004094       0x58 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a(lib_a-reent.o)
 
 .debug_loc      0x0000000000000000     0x1bca
  .debug_loc     0x0000000000000000       0x64 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a(lib_a-wf_sqrt.o)

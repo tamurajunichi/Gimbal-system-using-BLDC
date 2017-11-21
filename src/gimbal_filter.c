@@ -12,6 +12,7 @@
 #include "gimbal_filter.h"
 
 /* Variable -------------------------------------------------------------------*/
+const float32_t ema_k = 0.05f;
 
 /* Functions ------------------------------------------------------------------*/
 /**
@@ -22,26 +23,34 @@
   */
 void filter_init()
 {
-  ema_val=0;
-  pre_ema_val=0;
-  avg_accel_x=0;
-  avg_accel_y=0;
-  avg_accel_z=0;
-  avg_gyro_x=0;
-  avg_gyro_y=0;
-  avg_gyro_z=0;
-  func_count=0;
+  ema_val=0.0f;
+  pre_ema_val=0.0f;
+  avg_accel_x=0.0f;
+  avg_accel_y=0.0f;
+  avg_accel_z=0.0f;
+  avg_gyro_x=0.0f;
+  avg_gyro_y=0.0f;
+  avg_gyro_z=0.0f;
+  func_count=0.0f;
 
-  Q_angle = 0.001;
-  Q_gyro = 0.003;
-  R_angle = 0.03;
-  x_bias = 0;
+  Q_angle = 0.001f;
+  Q_gyro = 0.003f;
+  R_angle = 0.03f;
 
-  p[0][0] = 0;
-  p[1][0] = 0;
-  p[0][1] = 0;
-  p[1][1] = 0;
-  dt = 0.005;
+  x_bias = 0.0f;
+  y_bias = 0.0f;
+
+  p_00_x = 0.0f;
+  p_10_x = 0.0f;
+  p_01_x = 0.0f;
+  p_11_x = 0.0f;
+
+  p_00_y = 0.0f;
+  p_10_y = 0.0f;
+  p_01_y = 0.0f;
+  p_11_y = 0.0f;
+
+  dt = 0.01;
 
 }
 
@@ -55,7 +64,7 @@ void filter_init()
   */
 float filter_ema(float32_t val, float32_t pre_val)
 {
-   return(val * (float32_t)EMA_K) + (pre_val * (float32_t)(1 - EMA_K));
+   return(val * (float32_t)ema_k) + (pre_val * (float32_t)(1.0f - ema_k));
 }
 
 
@@ -74,9 +83,9 @@ int del_accel_offset(float32_t ax, float32_t ay,float32_t* p_offset_ax,float32_t
   avg_accel_x += ax;
   avg_accel_y += ay;
 
-  if(func_count >= 1500){
-    *p_offset_ax = avg_accel_x/1500.0f;
-    *p_offset_ay = avg_accel_y/1500.0f;
+  if(func_count >= 4000){
+    *p_offset_ax = avg_accel_x/4000.0f;
+    *p_offset_ay = avg_accel_y/4000.0f;
     return 1;
   }
   return 0;
@@ -97,10 +106,10 @@ int del_gyro_offset(float32_t gx, float32_t gy,float32_t gz,float32_t* p_offset_
   avg_gyro_y += gy;
   avg_gyro_z += gz;
 
-  if(func_count >= 1500){
-    *p_offset_gx = avg_gyro_x/1500.0f;
-    *p_offset_gy = avg_gyro_y/1500.0f;
-    *p_offset_gz = avg_gyro_z/1500.0f;
+  if(func_count >= 4000){
+    *p_offset_gx = avg_gyro_x/4000.0f;
+    *p_offset_gy = avg_gyro_y/4000.0f;
+    *p_offset_gz = avg_gyro_z/4000.0f;
     return 1;
   }
   return 0;
@@ -113,29 +122,55 @@ int del_gyro_offset(float32_t gx, float32_t gy,float32_t gz,float32_t* p_offset_
   * @param p_pre_val  
   * @param p_val      
   */
-float32_t filter_kalman(float32_t new_angle, float32_t new_rate)
+float32_t filter_kalman(float32_t new_angle, float32_t new_rate,TIM_TypeDef* TIMx)
 {
-  x_angle += dt * (new_rate - x_bias);
+  if(TIMx == TIM1){
+    x_angle += dt * (new_rate - x_bias);
 
-  p[0][0] += dt * (dt * p[1][1] - p[0][1] - p[1][0] + Q_angle);
-  p[0][1] -= dt * p[1][1];
-  p[1][0] -= dt * p[1][1];
-  p[1][1] += Q_gyro * dt;
+    p_00_x += dt * (dt * p_11_x - p_01_x - p_10_x + Q_angle);
+    p_01_x -= dt * p_11_x;
+    p_10_x -= dt * p_11_x;
+    p_11_x += Q_gyro * dt;
 
-  y = new_angle - x_angle;
-  S = p[0][0] + R_angle;
-  k[0] = p[0][0] / S;
-  k[1] = p[1][0] / S;
+    y_x = new_angle - x_angle;
+    S_x = p_00_x + R_angle;
+    k_0_x = p_00_x / S_x;
+    k_1_x = p_10_x / S_x;
 
-  x_angle += k[0] * y;
-  x_bias  += k[1] * y;
+    x_angle += k_0_x * y_x;
+    x_bias  += k_1_x * y_x;
 
-  p[0][0] -= k[0]*p[0][0];
-  p[0][1] -= k[0]*p[0][1];
-  p[1][0] -= k[1]*p[0][0];
-  p[1][1] -= k[1]*p[0][1];
+    p_00_x -= k_0_x*p_00_x;
+    p_01_x -= k_0_x*p_01_x;
+    p_10_x -= k_1_x*p_00_x;
+    p_11_x -= k_1_x*p_01_x;
 
-  return x_angle;
+    return x_angle;
+  }else
+  if(TIMx == TIM7){
+    y_angle += dt * (new_rate - y_bias);
+
+    p_00_y += dt * (dt * p_11_y - p_01_y - p_10_y + Q_angle);
+    p_01_y -= dt * p_11_y;
+    p_10_y -= dt * p_11_y;
+    p_11_y += Q_gyro * dt;
+
+    y_y = new_angle - y_angle;
+    S_y = p_00_y + R_angle;
+    k_0_y = p_00_y / S_y;
+    k_1_y = p_10_y / S_y;
+
+    y_angle += k_0_y * y_y;
+    y_bias  += k_1_y * y_y;
+
+    p_00_y -= k_0_y*p_00_y;
+    p_01_y -= k_0_y*p_01_y;
+    p_10_y -= k_1_y*p_00_y;
+    p_11_y -= k_1_y*p_01_y;
+
+    return y_angle;
+  }
+
 }
 
 /**********************************END OF FILE**********************************/

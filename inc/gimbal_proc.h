@@ -16,20 +16,17 @@
 #include "gimbal_stm32.h"
 
 /* Define macro ---------------------------------------------------------------*/
-#define WAITTIME 50
+#define WAITTIME 100
 #define SINE_ARRAY_MAX 359
 
 /* Variable -------------------------------------------------------------------*/
-uint32_t samp_Time,print_Time;
+uint32_t samp_Time;
 
-float32_t temp,pre_angle_x,pre_angle_y,
-angle_x,angle_y,angle_z,accel_angle_x,accel_angle_y,gyro_angle_x,gyro_angle_y,gyro_angle_z,
-accel_x,pre_accel_x,accel_y,pre_accel_y,accel_z,gyro_x,gyro_y,gyro_z,
-offset_ax,offset_ay,offset_az,offset_gx,offset_gy,offset_gz;
+float32_t temp,pre_angle_x,pre_angle_y,angle_x,angle_y,angle_z,accel_angle_x,accel_angle_y,gyro_angle_x,gyro_angle_y,gyro_angle_z,accel_x,pre_accel_x,accel_y,pre_accel_y,accel_z,gyro_x,gyro_y,gyro_z,offset_ax,offset_ay,offset_az,offset_gx,offset_gy,offset_gz,duty_PhaseU,duty_PhaseV,duty_PhaseW,print_Time;
 
-float32_t duty_PhaseU,duty_PhaseV,duty_PhaseW;
 int   phaseU,phaseV,phaseW,i,flag;
-int32_t dbg_period;
+
+int32_t dbg_period_x,dbg_period_y;
 
 /* Functions ------------------------------------------------------------------*/
 void data_init();
