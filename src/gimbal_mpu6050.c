@@ -59,9 +59,8 @@ void I2C1_EV_IRQHandler(void)
 void I2C1_ER_IRQHandler(void)
 {
   serial_putchar(USART3, 'E');
-  setup_i2c_for_mpu6050();
-  delay(2000000);
-  setup_mpu6050();
+  data_init();
+  return;
   
 }
 
@@ -453,7 +452,7 @@ void setup_mpu6050(void)
       continue;
 
     /* Disable digital low-pass filter (DLPF) */
-    write_mpu6050_reg(MPU6050_REG_CONFIG, 0);
+    write_mpu6050_reg(MPU6050_REG_CONFIG, 2);
     /* 1000 Hz sample rate. */
     write_mpu6050_reg(MPU6050_REG_SMPRT_DIV, 7);
     /* Lowest resolution, +-2000 degrees / second and +-16g. */

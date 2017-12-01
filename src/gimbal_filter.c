@@ -12,7 +12,7 @@
 #include "gimbal_filter.h"
 
 /* Variable -------------------------------------------------------------------*/
-const float32_t ema_k = 0.05f;
+const float32_t ema_k = 0.6f;
 
 /* Functions ------------------------------------------------------------------*/
 /**
@@ -50,7 +50,7 @@ void filter_init()
   p_01_y = 0.0f;
   p_11_y = 0.0f;
 
-  dt = 0.01;
+  dt = 0.005f;
 
 }
 
@@ -83,9 +83,9 @@ int del_accel_offset(float32_t ax, float32_t ay,float32_t* p_offset_ax,float32_t
   avg_accel_x += ax;
   avg_accel_y += ay;
 
-  if(func_count >= 4000){
-    *p_offset_ax = avg_accel_x/4000.0f;
-    *p_offset_ay = avg_accel_y/4000.0f;
+  if(func_count >= 2000){
+    *p_offset_ax = avg_accel_x/2000.0f;
+    *p_offset_ay = avg_accel_y/2000.0f;
     return 1;
   }
   return 0;
@@ -106,10 +106,10 @@ int del_gyro_offset(float32_t gx, float32_t gy,float32_t gz,float32_t* p_offset_
   avg_gyro_y += gy;
   avg_gyro_z += gz;
 
-  if(func_count >= 4000){
-    *p_offset_gx = avg_gyro_x/4000.0f;
-    *p_offset_gy = avg_gyro_y/4000.0f;
-    *p_offset_gz = avg_gyro_z/4000.0f;
+  if(func_count >= 2000){
+    *p_offset_gx = avg_gyro_x/2000.0f;
+    *p_offset_gy = avg_gyro_y/2000.0f;
+    *p_offset_gz = avg_gyro_z/2000.0f;
     return 1;
   }
   return 0;

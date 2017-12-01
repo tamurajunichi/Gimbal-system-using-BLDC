@@ -50,7 +50,7 @@ void TIM1_UP_TIM10_IRQHandler()
   if(TIM_GetITStatus(TIM1,TIM_IT_Update) != RESET)
   {
     TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
-    generate_sine_pwm(get_angle_x(),TIM4);
+    generate_sine_pwm(get_dir(TIM1),TIM4);
   }
 }
 
@@ -65,7 +65,7 @@ void TIM7_IRQHandler()
   if(TIM_GetITStatus(TIM7,TIM_IT_Update) != RESET)
   {
     TIM_ClearITPendingBit(TIM7, TIM_IT_Update);
-
+    generate_sine_pwm(get_dir(TIM7),TIM5);
   }
 }
 
@@ -74,7 +74,7 @@ void TIM7_IRQHandler()
   * @brief  Generate sinusoidal pwm
   *
   * @param  None
-  
+  */
 void TIM8_UP_TIM13_IRQHandler()
 {
   if(TIM_GetITStatus(TIM8,TIM_IT_Update) != RESET)
@@ -83,7 +83,7 @@ void TIM8_UP_TIM13_IRQHandler()
 
   }
 }
-*/
+
 /**
   * @brief     Initialization and Configuration
   *
@@ -113,7 +113,7 @@ void tim_init()
 
   setup_tim_rcc();
 
-  //setup_carrier(TIM3);
+  setup_carrier(TIM3);
   setup_carrier(TIM4);
   setup_carrier(TIM5);
  
@@ -121,7 +121,7 @@ void tim_init()
 
   setup_sine(TIM1);
   setup_sine(TIM7);
-  //setup_sine(TIM8);
+  setup_sine(TIM8);
 
   setup_timer();
   
@@ -218,23 +218,23 @@ void setup_tim_gpio()
 { 
   GPIO_InitTypeDef GPIO_InitStruct;
 
-  //GPIO_PinAFConfig(GPIOB,GPIO_PinSource7,GPIO_AF_TIM3);
-  //GPIO_PinAFConfig(GPIOB,GPIO_PinSource8,GPIO_AF_TIM3);
-  //GPIO_PinAFConfig(GPIOB,GPIO_PinSource9,GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOB,GPIO_PinSource7,GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOB,GPIO_PinSource8,GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOB,GPIO_PinSource9,GPIO_AF_TIM3);
   GPIO_PinAFConfig(GPIOD,GPIO_PinSource13,GPIO_AF_TIM4);
   GPIO_PinAFConfig(GPIOD,GPIO_PinSource14,GPIO_AF_TIM4);
   GPIO_PinAFConfig(GPIOD,GPIO_PinSource15,GPIO_AF_TIM4);
+  GPIO_PinAFConfig(GPIOA,GPIO_PinSource1,GPIO_AF_TIM5);
   GPIO_PinAFConfig(GPIOA,GPIO_PinSource2,GPIO_AF_TIM5);
   GPIO_PinAFConfig(GPIOA,GPIO_PinSource3,GPIO_AF_TIM5);
-  GPIO_PinAFConfig(GPIOA,GPIO_PinSource4,GPIO_AF_TIM5);
-/*
+
   GPIO_InitStruct.GPIO_Pin = TIM3_GPIO_PIN;
   GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
   GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
   GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_Init(GPIOB,&GPIO_InitStruct);
-*/
+
   GPIO_InitStruct.GPIO_Pin = TIM4_GPIO_PIN;
   GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
@@ -285,13 +285,13 @@ void setup_tim_nvic()
   NVIC_InitStruct.NVIC_IRQChannelSubPriority = 1;
   NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStruct);
-/*
+
   NVIC_InitStruct.NVIC_IRQChannel = TIM8_UP_TIM13_IRQn;
   NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStruct.NVIC_IRQChannelSubPriority = 1;
   NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStruct);
-*/
+
 }
 
 /**
@@ -324,10 +324,10 @@ uint32_t tim2_get_time()
   *
   *@param   None
   */
-int32_t resetup_sine(TIM_TypeDef* TIMx,int tim_period)
+float32_t resetup_sine(TIM_TypeDef* TIMx,float32_t tim_period)
 {
   TIM_TimeBaseInitTypeDef TIM_BaseStruct;
-  TIM_BaseStruct.TIM_Prescaler = 4;
+  TIM_BaseStruct.TIM_Prescaler = 1000;
   TIM_BaseStruct.TIM_CounterMode = TIM_CounterMode_Up;
   TIM_BaseStruct.TIM_Period = tim_period;
   TIM_BaseStruct.TIM_ClockDivision = TIM_CKD_DIV1;

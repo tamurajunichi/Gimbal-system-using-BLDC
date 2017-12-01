@@ -25,7 +25,7 @@
   */
 #define TIM3_GPIO_PIN ((uint16_t)(GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9))
 #define TIM4_GPIO_PIN ((uint16_t)(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15))
-#define TIM5_GPIO_PIN ((uint16_t)(GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4))
+#define TIM5_GPIO_PIN ((uint16_t)(GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3))
 
 #define TIM3_GPIO_PIN_SOURCE ((uint16_t)GPIO_PinSource7 | GPIO_PinSource8 | GPIO_PinSource9)
 #define TIM4_GPIO_PIN_SOURCE ((uint16_t)GPIO_PinSource13 | GPIO_PinSource14 | GPIO_PinSource15)
@@ -58,7 +58,7 @@ void setup_timer();
 void setup_tim_nvic();
 void setup_tim_gpio();
 void setup_tim_rcc();
-int32_t resetup_sine(TIM_TypeDef* TIMx, int tim_period);
+float32_t resetup_sine(TIM_TypeDef* TIMx, float32_t tim_period);
 
 uint32_t tim2_get_time();
 
