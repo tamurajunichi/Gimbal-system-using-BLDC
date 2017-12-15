@@ -17,6 +17,7 @@
 
 /* Define macro ---------------------------------------------------------------*/
 #define TARGET_ANGLE 0
+#define MAX_DEG_SEC 330.0f
 
 /* Variable -------------------------------------------------------------------*/
 float32_t kp_x,ki_x,kd_x,kp_y,ki_y,kd_y,e[5],ux,uy,tim1_period,tim2_period,i_sum_x,i_sum_y;

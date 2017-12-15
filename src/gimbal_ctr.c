@@ -24,12 +24,12 @@ void ctr_init()
     e[j] = 0.0f;
   }
 
-  kp_x = 5.00f;
+  kp_x = 4.30f;
   ki_x = 0.00f;
-  kd_x = 0.07f;
-  kp_y = 0.5f;
-  ki_y = 0.0f;
-  kd_y = 0.0f;
+  kd_x = 0.057f;
+  kp_y = 9.3f;
+  ki_y = 2.5f;
+  kd_y = 0.063f;
   /*kp_y = 18.0f;
   ki_y = 17.8f;
   kd_y = 0.0082f;*/
@@ -74,18 +74,20 @@ float32_t pid_ctr(float32_t pid_angle,float32_t samp_time,TIM_TypeDef* target)
     e[1] = e[0];
     e[0] = (float32_t)TARGET_ANGLE - pid_angle;
     i_sum_x += (e[0] + e[1]) / 2.0f * samp_time;
+    if(e[0] > 90.0f)e[0] = 90.0f;
+    if(e[0] < -90.0f)e[0] = -90.0f;
 
     ux = kp_x*e[0] + ki_x*i_sum_x + kd_x*(e[1] - e[0])/samp_time;
     
     //CW
     if(ux < 0){
-      if(ux < -400)ux = -400;      
+      if(ux < -MAX_DEG_SEC)ux = -MAX_DEG_SEC;      
       tim1_period = -((84000.0f / (6.0f * ux)) + 1.0f);
       dir_ctr(target,1);
     }else
     //CCW
     if(ux > 0){
-      if(ux > 400)ux = 400;
+      if(ux > MAX_DEG_SEC)ux = MAX_DEG_SEC;
       tim1_period = (84000.0f / (6.0f * ux)) + 1.0f;
       dir_ctr(target,-1);
     }
@@ -95,24 +97,26 @@ float32_t pid_ctr(float32_t pid_angle,float32_t samp_time,TIM_TypeDef* target)
   }
   if(target == TIM7)
   {
-    //if(pid_angle < 0.3f && pid_angle > -0.3f)pid_angle = 0.0f;
+    if(pid_angle < 0.1f && pid_angle > -0.1f)pid_angle = 0.0f;
 
     e[5] = e[4];
     e[4] = e[3];
     e[3] = (float32_t)TARGET_ANGLE - pid_angle;
     i_sum_y += (e[3] + e[4]) / 2.0f * samp_time;
+    if(e[3] > 90.0f)e[3] = 90.0f;
+    if(e[3] < -90)e[3] = -90.0f;
 
     uy = kp_y*e[3] + ki_y*i_sum_y + kd_y*(e[4] - e[3])/samp_time;
 
     //CW
     if(uy < 0){
-      if(uy < -400)uy = -400;      
+      if(uy < -MAX_DEG_SEC)uy = -MAX_DEG_SEC;      
       tim2_period = -((84000.0f / (6.0f * uy)) + 1.0f);
       dir_ctr(target,1);
     }else
     //CCW
     if(uy > 0){
-      if(uy > 400)uy = 400;
+      if(uy > MAX_DEG_SEC)uy = MAX_DEG_SEC;
       tim2_period = (84000.0f / (6.0f * uy)) + 1.0f;
       dir_ctr(target,-1);
     }
