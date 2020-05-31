@@ -1,1 +1,5 @@
-This program had been used PID controll system for gimbal with stm32f4 and BLDC mortor .
+stm32f4を用いたPIDジンバル制御用プログラム。
+
+ライブラリにはstdペリフェラルドライバーを使用しています。
+linuxからusbを使ってstm32f4discoveryへ直接書き込んでください。
+書き込み用のツールは各自手に入れること。
