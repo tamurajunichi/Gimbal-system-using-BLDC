@@ -28,7 +28,7 @@ int   phaseu_x,phasev_x,phasew_x,phaseu_y,phasev_y,phasew_y,flag;
 
 /* Functions ------------------------------------------------------------------*/
 void data_init();
-void data_processing(uint32_t tim2_count);
+void main_proc(uint32_t tim2_count);
 
 void proc_mpu6050();
 void proc_gyro_angle();
