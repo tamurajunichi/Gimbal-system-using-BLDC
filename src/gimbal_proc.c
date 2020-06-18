@@ -71,12 +71,12 @@ void data_init()
 
 
 /**
-  * @fn     data_processing
-  * @bried  process data
+  * @fn     main_proc
+  * @brief  The main process is here.
   * 
   * @param  tim2_count
   */
-void data_processing(uint32_t tim2_count)
+void main_proc(uint32_t tim2_count)
 {
   if((tim2_count - samp_Time) >= WAITTIME){
    samp_Time  = tim2_count;
